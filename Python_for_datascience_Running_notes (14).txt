@@ -1,0 +1,6634 @@
+Python for Data Science, Machine Learning ,Deep Learning and AI
+------------------------------------------------------------
+Python for Devops--->Regular Core Python Knowledge
+     Concise code
+     Rich Libraries --->70 to 90% our libraries 10% we have to write the code
+Data Science
+
+Devops  vs DataScience
+Programming background--->DataScience
+Admin related background, non-programming background--->devops
+
+
+
+Numpy
+Pandas
+Matplotlib
+seaborn
+scikit learn
+scipy
+etc
+
+I want to learn...parallely you people also will learn
+30 days   1 month
+
+Numpy--->Entry point from python for datascience
+
+Numpy--->Numerical Python Library
+
+What is the need of Numpy?
+---------------------------
+By using python we can perform mathematical operations
+
+a = 10
+b= 20
+
+a+b
+a-b
+a*b
+a/b
+
+math.sqrt(10)
+
+
+Data Science, Machine Learning ,Deep Learning and AI required complex mathematical operations...
+
+1. numpy defines several functions to perform complex mathematical operations.
+2. to fulfill performance gaps
+   most of the numpy is implemented in C language
+   superfast
+3. nd array
+     ---->n dimensional array  or numpy array  
+    numpy acts as backbone for remaining libraries also.
+
+
+matrix  with all zeros   10X10 shape
+nested list
+[[0,0,0,0,0,0,0,0,,,],[],[]]
+
+list of 100
+identity matrix???
+
+
+3.   Data Analysis
+2 crore samples are analyzed..
+
+100 points--->
+
+new patient-->
+
+
+History of Numpy:
+-----------------
+Origin of Numpy --->Numeric Library
+Numeric Library--->Jim Hugunin
+Numpy--->Travis Oliphant  and other contributors 2005
+Open Source Library and Freeware
+
+sir jim hugunin developed numpy or travis oliphant????
+
+
+Q. In Which languages Numpy was written?
+C and Python
+
+Q. What is nd array in numpy:
+-----------------------------
+The fundatmental data type to store our data: nd array
+
+arrays are objects of ndarray class present in numpy module.
+
+
+Array: an indexed collection of homogeneous elements
+
+1 dimensional arrays--->Vector
+2 dimensional arrays--->Matrix
+..
+n dimensional arrays
+
+Application areas of Numpy?
+
+Numpy Basic Introduction
+Array Creation
+    10+ ways 
+Attributes
+How to access elements of array
+    Basic Indexing
+    Slice Operation
+    Advanced Indexing
+    Condition Based Selection
+How to iterate elements of array:
+     python's normal loops
+     nditer()
+     ndenumerate()
+
+Arithmetic operators
+Broadcasting
+Array Manipulation functions
+     reshape()
+     resize()
+     flatten()
+     ravel()
+     transpose()
+     etc...
+Matrix class
+etc
+
+Running Notes
+Material 
+Videos for 6 months access
+Rs 999
+
+Bhavani: 
+durgasoftonlinetraining@gmail.com
+durgasoftonline@gmail.com
+99 2737 2737, 80 96969696
+
+If you are facing any audio or video problem even in future please logout and login again
+
+
+https://www.youtube.com/watch?v=-ffFPJlq7JA
+
+How to install numpy:
+--------------------
+2 ways
+
+1st way: Anaconda--->flavour of python
+
+2nd way: on top of python
+pip install numpy
+
+Performance Test:
+----------------
+Numpy vs Normal Python :
+-----------------------
+import numpy as np
+from datetime import datetime
+
+a = np.array([10,20,30])
+b = np.array([1,2,3])
+
+#dot product: A.B=10X1 + 20X2 +30X3=140
+
+#traditional python code
+def dot_product(a,b):
+	result = 0
+	for i,j in zip(a,b):
+		result = result + i*j
+	return result
+
+before = datetime.now()
+for i in range(1000000):
+	dot_product(a,b)
+after = datetime.now()
+
+print('The Time taken by traditonal python:',after-before)
+
+#numpy library code
+before = datetime.now()
+for i in range(1000000):
+	np.dot(a,b) # this is from numpy
+after = datetime.now()
+
+print('The Time taken by Numpy Library:',after-before)
+
+
+Array:
+-----
+An indexed collection of homogeneous data elements.
+
+
+C/C++/Java
+
+How to create arrays in python:
+-------------------------------
+inbuilt arrays concept is not there in python.
+
+2 ways
+
+1. By using array module
+2. By using numpy module
+
+1. By using array module:
+-------------------------
+import array
+a = array.array('i',[10,20,30]) # i represents type: int array
+print(type(a))
+print(a)
+print('Elements one by one:')
+for x in a:
+	print(x)
+
+D:\durgaclasses>py test.py
+<class 'array.array'>
+array('i', [10, 20, 30])
+Elements one by one:
+10
+20
+30
+
+Note: array module is not recommended because much library support is not available.
+
+
+2. numpy module:
+-----------------
+import numpy
+a = numpy.array([10,20,30])
+print(type(a)) #<class 'numpy.ndarray'>
+print(a)
+print('Elements one by one:')
+for x in a:
+	print(x)
+
+
+D:\durgaclasses>py test.py
+<class 'numpy.ndarray'>
+[10 20 30]
+Elements one by one:
+10
+20
+30
+
+Python's List vs  numpy ndarray:
+--------------------------------
+
+1. Similarities:
+----------------
+1. Both can be used to store data
+2. The order will be preserved in both. Hence indexing and slicing concepts are applicable.
+3. Both are mutable, ie we can change the content.
+
+2. Differences:
+---------------
+1. list is python's inbuilt type. we have to install and import numpy explicitly.
+
+2. List can contain heterogeneous elements. But array contains only homogeneous elements.
+
+3. On list, we cannot perform vector operations. But on ndarray we can perform vector operations.
+
+4. Arrays consume less memory than list.
+
+import numpy as np
+import sys
+l = [10,20,30,40,50,60,70,80,90,100,10,20,30,40,50,60,70,80,90,100,10,20,30,40,50,60,70,80,90,100]
+a = np.array([10,20,30,40,50,60,70,80,90,100,10,20,30,40,50,60,70,80,90,100,10,20,30,40,50,60,70,80,90,100])
+print('The Size of list:',sys.getsizeof(l))
+print('The Size of ndarray:',sys.getsizeof(a))
+
+
+The Size of list: 296
+The Size of ndarray: 224
+
+
+5. Arrays are superfast when compared with list.
+6. Numpy arrays are more convenient to use while performing complex mathematical operations
+
+
+https://drive.google.com/drive/folders/1asCu9DPBttM3wI44uFrWh3qXwlgzZBPn?usp=sharing
+
+https://www.youtube.com/watch?v=-ffFPJlq7JA
+https://www.youtube.com/watch?v=sFMY8TGBFto
+
+
+
+Basic Introduction to Numpy
+---------------------------
+ndarray
+
+ndarray vs python list
+numpy vs python
+
+How to create Numpy Arrays:
+----------------------------
+1. array()
+2. arange()
+3. linspace()
+4. zeros()
+5. ones()
+6. full()
+7. eye()
+8. identity()
+9. empty()
+10. numpy.random library
+      1. randint()
+      2. rand()
+      3. uniform()
+      4. randn()
+      5. normal()
+      6. shuffle()
+etc      
+
+
+1. Creation of numpy arrays by using array();
+----------------------------------------------
+For the given list or tuple
+
+1-D array:
+-----------
+>>> l = [10,20,30]
+>>> type(l)
+<class 'list'>
+>>> a = np.array(l)
+>>> type(a)
+<class 'numpy.ndarray'>
+>>> a
+array([10, 20, 30])
+
+
+Note:
+a.ndim--->To know dimension of ndarray
+a.dtype--->To know data type of elements
+
+
+2-D array creation:
+-------------------
+[[10,20,30],[40,50,60],[70,80,90]] --->Nested List
+
+>>> a = np.array([[10,20,30],[40,50,60],[70,80,90]])
+>>> type(a)
+<class 'numpy.ndarray'>
+>>> a.ndim
+2
+>>> a
+array([[10, 20, 30],
+       [40, 50, 60],
+       [70, 80, 90]])
+>>> a.ndim
+2
+>>> a.shape
+(3, 3)
+>>> a.size
+9
+
+
+eg-3: 1-D array from the tuple:
+-------------------------------
+>>> a = np.array(('durga','ravi','shiva'))
+>>> a
+array(['durga', 'ravi', 'shiva'], dtype='<U5')
+>>> type(a)
+<class 'numpy.ndarray'>
+>>> a.ndim
+1
+>>> a.shape
+(3,)
+>>> a.size
+3
+
+Note: Array contains only homogeneous elements.
+if list contains heterogeneous elements: upcasting will be performed.
+
+>>> a = np.array([10,20,10.5])
+>>> a
+array([10. , 20. , 10.5])
+>>> a.dtype
+dtype('float64')
+
+
+>>> a=np.array([10,20,'a'])
+>>> a
+array(['10', '20', 'a'], dtype='<U11')
+
+
+How to create array of a particular type:
+-----------------------------------------
+We have to use dtype argument.
+
+>>> a = np.array([10,20,30.5])
+>>> a
+array([10. , 20. , 30.5])
+>>> a = np.array([10,20,30.5],dtype=int)
+>>> a
+array([10, 20, 30])
+>>> a = np.array([10,20,30.5],dtype=float)
+>>> a
+array([10. , 20. , 30.5])
+>>> a = np.array([10,20,30.5],dtype=bool)
+>>> a
+array([ True,  True,  True])
+>>> a = np.array([10,20,30.5,0],dtype=bool)
+>>> a
+array([ True,  True,  True, False])
+
+>>> a = np.array([10,20,30.5,0],dtype=complex)
+>>> a
+array([10. +0.j, 20. +0.j, 30.5+0.j,  0. +0.j])
+
+>>> a = np.array([10,20,30.5],dtype=str)
+>>> a
+array(['10', '20', '30.5'], dtype='<U4')
+
+
+>>> a = np.array([10,'durga'],dtype=int)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: 'durga'
+
+            object
+
+int,float,str,bool,complex
+
+How to create object type array:
+------------------------------
+Here any type of elements are allowed.
+
+>>> a = np.array([10,'durga',10.5,True,10+20j],dtype=object)
+>>> a
+array([10, 'durga', 10.5, True, (10+20j)], dtype=object)
+
+>>> a = np.array([10,'durga',10.5,True,10+20j])
+>>> a
+array(['10', 'durga', '10.5', 'True', '(10+20j)'], dtype='<U64')
+>>>
+
+arra90--->To create ndarray from the given list or tuple.
+
+Creation of ndarray by using arange() function:
+-----------------------------------------------
+Python:
+  1. range(n)--->n values from 0 to n-1
+     range(4)--->0,1,2,3
+  2. range(m,n)--->from m to n-1
+    range(2,7)--->2,3,4,5,6
+  
+  3. range(begin,end,step)
+      range(1,11,1)--->1,2,3,4,5,6,7,8,9,10
+      range(1,11,2)--->1,3,5,7,9
+      range(1,11,3)--->1,4,7,10
+        
+arange([start,] stop[, step,], dtype=None, *, like=None)
+
+eg-1:
+>>> a = np.arange(10)
+>>> a
+array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+>>> a.ndim
+1
+>>> a.shape
+(10,)
+>>> a.dtype
+dtype('int32')
+
+eg-2:
+>>> a = np.arange(1,11)
+>>> a
+array([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10])
+
+eg-3:
+>>> a = np.arange(1,11,2)
+>>> a
+array([1, 3, 5, 7, 9])
+
+
+
+>>> a = np.arange(1,11,3,dtype=float)
+>>> a
+array([ 1.,  4.,  7., 10.])
+
+
+so no 2d array by arange()?
+
+linspace():
+----------
+
+in the specified interval , linearly spaced values
+
+
+
+
+linspace(start, stop, num=50, endpoint=True, retstep=False, dtype=None, axis=0)
+    Return evenly spaced numbers over a specified interval.
+
+
+np.linspace(0,1)
+
+arange()  vs linspace()
+-----------------------
+arange()--->elements will be considered in the given range based on step value.
+linspace() --->The specified number of values will be considered in the given range.
+
+
+zeros():
+--------
+
+(10,)--->1-D array contains 10 elements
+(5,2)--->2-D array contains 5 rows and 2 columns
+
+   2-D array means a collectio of 1-D arrays
+
+
+(2,3,4)--->3-D array
+   3-D array contains a collection of 2-D arrays
+
+   2--->2  number of 2-D arrays
+   3--->The number of rows in every 2-D array
+   4--->The number of columns in every 2-D array
+   size: 24
+
+
+(10,)
+(5,2)
+(4,3,2)
+
+zeros(shape, dtype=float, order='C', *, like=None)
+
+
+(2,3,4)
+array([[[0, 0, 0, 0],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0]],
+
+       [[0, 0, 0, 0],
+        [0, 0, 0, 0],
+        [0, 0, 0, 0]]])
+
+
+do we have (1,3,2) array?
+
+1   2-D array
+3 rows and 2 columns
+
+
+(2,2,3,4)
+4-D array means a group of 3-D arrays
+2    3-D arrays are there
+
+Every 3-D array contains 2    2-D arrays
+Every 2-D array contains 3 rows and 4 columns
+Total number of elements: 48
+
+[
+	[
+		[[0,0,0,0],
+		[0,0,0,0],
+		[0,0,0,0]],
+
+		[[0,0,0,0],
+		[0,0,0,0],
+		[0,0,0,0]]
+	]
+
+	[
+		[[0,0,0,0],
+		[0,0,0,0],
+		[0,0,0,0]],
+
+		[[0,0,0,0],
+		[0,0,0,0],
+		[0,0,0,0]]
+	]
+]
+
+
+>>> np.zeros((2,2,3,4),dtype=int)
+	array([[[[0, 0, 0, 0],
+		 [0, 0, 0, 0],
+		 [0, 0, 0, 0]],
+
+        [[0, 0, 0, 0],
+         [0, 0, 0, 0],
+         [0, 0, 0, 0]]],
+
+
+       [[[0, 0, 0, 0],
+         [0, 0, 0, 0],
+         [0, 0, 0, 0]],
+
+        [[0, 0, 0, 0],
+         [0, 0, 0, 0],
+         [0, 0, 0, 0]]]])
+
+
+performing some operations the result we have to store somewhere
+
+
+1. ones():
+----------
+
+Exactly same as zeros  except that instead of zero array filled with value 1.
+fill_value  is 1
+
+>>> np.ones(10)
+array([1., 1., 1., 1., 1., 1., 1., 1., 1., 1.])
+>>> np.ones((5,2),dtype=int)
+array([[1, 1],
+       [1, 1],
+       [1, 1],
+       [1, 1],
+       [1, 1]])
+>>> np.ones((2,3,4),dtype=int)
+array([[[1, 1, 1, 1],
+        [1, 1, 1, 1],
+        [1, 1, 1, 1]],
+
+       [[1, 1, 1, 1],
+        [1, 1, 1, 1],
+        [1, 1, 1, 1]]])
+
+
+1. array()
+2. arange()
+3. linspace()
+4. zeros()
+5. ones()
+6. full()
+   
+ full(shape, fill_value, dtype=None, order='C', *, like=None)   
+
+>>> np.full(10,2)
+array([2, 2, 2, 2, 2, 2, 2, 2, 2, 2])
+>>> np.full(10,4)
+array([4, 4, 4, 4, 4, 4, 4, 4, 4, 4])
+>>> np.full((5,4),7)
+array([[7, 7, 7, 7],
+       [7, 7, 7, 7],
+       [7, 7, 7, 7],
+       [7, 7, 7, 7],
+       [7, 7, 7, 7]])
+>>> np.full((2,3,4),9)
+array([[[9, 9, 9, 9],
+        [9, 9, 9, 9],
+        [9, 9, 9, 9]],
+
+       [[9, 9, 9, 9],
+        [9, 9, 9, 9],
+        [9, 9, 9, 9]]])
+
+eye()
+identity()
+
+
+
+https://www.youtube.com/playlist?list=PLd3UqWTnYXOmq7EMCWvIcyPHyoOj8JClb
+
+https://drive.google.com/drive/folders/1asCu9DPBttM3wI44uFrWh3qXwlgzZBPn?usp=sharing
+
+
+full(shape, fill_value, dtype=None, order='C', *, like=None)
+
+np.full(shape=(2,3,4),fill_value=7)
+np.full((2,3,4),fill_value=7)
+np.full((2,3,4),7)
+
+
+
+zeros()
+ones()
+full()
+
+eye():
+------
+To generate identity matrix
+
+eye(N, M=None, k=0, dtype=<class 'float'>, order='C', *, like=None)
+    Return a 2-D array with ones on the diagonal and zeros elsewhere.
+
+
+f(a,b)
+f(a,/,b)--->We should pass values as positional arguments only
+
+   f(10,20)
+   f(10,b=20)
+   f(a=10,b=20)--->invalid
+
+   /--->before variables
+
+f(a,*,b)
+f(*,a,b)
+  *-->for The variables after *, we should provide values by keyword arguemnts only/
+
+
+eye(N, M=None, k=0, dtype=<class 'float'>, order='C', *, like=None)
+    Return a 2-D array with ones on the diagonal and zeros elsewhere.
+
+N--->Number of rows
+M--->Number of columns
+
+>>> np.eye(2,3)
+array([[1., 0., 0.],
+       [0., 1., 0.]])
+>>> np.eye(3,2)
+array([[1., 0.],
+       [0., 1.],
+       [0., 0.]])
+>>> np.eye(3)
+array([[1., 0., 0.],
+       [0., 1., 0.],
+       [0., 0., 1.]])
+>>> np.eye(3,dtype=int)
+array([[1, 0, 0],
+       [0, 1, 0],
+       [0, 0, 1]])
+>>> np.eye(5)
+array([[1., 0., 0., 0., 0.],
+       [0., 1., 0., 0., 0.],
+       [0., 0., 1., 0., 0.],
+       [0., 0., 0., 1., 0.],
+       [0., 0., 0., 0., 1.]])
+>>> np.eye(5,k=1)
+array([[0., 1., 0., 0., 0.],
+       [0., 0., 1., 0., 0.],
+       [0., 0., 0., 1., 0.],
+       [0., 0., 0., 0., 1.],
+       [0., 0., 0., 0., 0.]])
+>>> np.eye(5,k=-3)
+array([[0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0.],
+       [0., 0., 0., 0., 0.],
+       [1., 0., 0., 0., 0.],
+       [0., 1., 0., 0., 0.]])
+
+Q. Which of the following is true about returned array of eye() function?
+
+A. It is always 2-D array.
+B. The number of rows and number of columns need not be same.
+C. Bydefault main diagonal contains 1s. But we can customize the diagonal which has to contain 1s.
+D. All of these.
+
+Ans: D
+
+Q. Which of the following is true about returned array of eye() function?
+
+A. It can be any dimensional array.
+B. The number of rows and number of columns must be same.
+C. only main diagonal contains 1s. 
+D. None  of these.
+
+Ans: D
+
+
+eye always return 2d array so why A is not correct in 1st question
+
+
+identity() function:
+--------------------
+It is exactly same as eye() function except that
+   1. It is always square matrix(The number of rows and number of columns always same)
+   2. only main diagonal contains 1s
+
+identity() is special case of eye()
+
+identity(N,
+
+sir can we get any value other than 1 in eye and identity???
+No
+
+
+
+
+Q. Which of the following is true about returned array of identity() function?
+
+A. It is always 2-D array.
+B. The number of rows and number of columns need not be same.
+C. Bydefault main diagonal contains 1s. But we can customize the diagonal which has to contain 1s.
+D. All of these.
+
+Ans: A
+
+Q. Which of the following is true about returned array of identity() function?
+
+A. It can be any dimensional array.
+B. The number of rows and number of columns must be same.
+C. only main diagonal contains 1s. 
+D. None  of these.
+
+Ans: B,C
+
+array()
+arange()
+linspace()
+zeros()
+ones()
+full()
+eye()
+identity()
+empty():
+--------
+empty(shape, dtype=float, order='C', *, like=None)
+
+    Return a new array of given shape and type, without initializing entries.
+
+np.empty((3,3))
+
+zeros() vs empty():
+-------------------
+If we required an array only with zeros then we should go for zeros().
+If we never worry about data, just we required an empty array for future purpose, then we should go for empty().
+The time required to create emtpy array is very very less when compared with zeros array. i.e performance wise empty() function is recommended than zeros() if we are not worry about data.
+eg:
+
+import numpy as np
+from datetime import datetime
+import sys
+
+begin = datetime.now()
+a = np.zeros((25000,300,400))
+after = datetime.now()
+print('Time taken by zeros:',after-begin)
+
+a= None
+begin = datetime.now()
+a = np.empty((25000,300,400))
+after = datetime.now()
+print('Time taken by empty:',after-begin)
+
+
+
+
+D:\durgaclasses>py test.py
+Time taken by zeros: 0:00:00.430188
+Time taken by empty: 0:00:00.056541
+
+
+1. array()
+2. arange()
+3. linspace()
+4. zeros()
+5. ones()
+6. full()
+7. eye()
+8. identity()
+
+
+Numpy: ndarray
+Scipy
+Pandas: Series and DataFrame
+Matplotlib--->Seaborn-->plotly
+
+
+Array creation by using random library:
+--------------------------------------
+This library contains several functions to create nd arrays with random data.
+
+1. randint()
+2. rand()
+3. uniform()
+4. randn()
+5. normal()
+6. shuffle()
+etc
+
+
+1. randint():
+-------------
+To generate random int values in the given range
+
+randint(low, high=None, size=None, dtype=int)
+
+    Return random integers from `low` (inclusive) to `high` (exclusive).
+    [low,high)
+
+eg-1:
+np.random.randint(10,20)
+it will generate a single random int value in the range 10 to 19.
+
+eg-2: To create 1-D ndarray of size 10 with random values from 1 to 8?
+
+np.random.randint(1,9,size=10)
+>>> np.random.randint(1,9,size=10)
+array([6, 7, 6, 3, 5, 3, 3, 5, 4, 2])
+>>> np.random.randint(1,9,size=10)
+array([5, 3, 2, 3, 4, 7, 7, 1, 1, 6])
+>>> np.random.randint(1,9,size=10)
+array([8, 1, 4, 6, 6, 5, 4, 1, 4, 8])
+
+eg-3: To create 2D array with shape(3,5)
+np.random.randint(100,size=(3,5))
+
+from 0 to 99 random values, 2-D array will be created 
+>>> np.random.randint(100,size=(3,5))
+array([[39, 42, 90, 57, 92],
+       [39, 27, 71, 96, 83],
+       [47, 38, 98, 20, 82]])
+
+
+eg-3: To create 3D array with shape(2,3,4)
+
+3D array contains 2  2-D arrays
+Each 2-D array contains 3 rows and 4 columns
+np.random.randint(100,size=(2,3,4))
+
+>>> np.random.randint(100,size=(2,3,4))
+array([[[ 1, 50, 90, 47],
+        [83, 97, 44, 85],
+        [60, 16, 15, 35]],
+
+       [[39, 52, 20,  0],
+        [74, 95, 45, 40],
+        [ 4, 55, 34, 67]]])
+
+
+randint(low, high=None, size=None, dtype=int)
+randint(low, high=None, size=None)
+
+
+int8
+int16
+int32
+int64
+
+np.random.randint(1,11,size=(20,30))
+
+
+>>> import sys
+>>> a = np.random.randint(1,11,size=(20,30))
+>>> sys.getsizeof(a)
+2520
+>>> a = np.random.randint(1,11,size=(20,30),dtype='int8')
+>>> sys.getsizeof(a)
+
+
+How to convert from one array type to another array type:
+---------------------------------------------------------
+We have to use astype() method.
+
+>>> a = np.random.randint(1,11,size=(20,30))
+>>> a.dtype
+dtype('int32')
+>>> b = a.astype('float')
+>>> b.dtype
+dtype('float64')
+
+
+
+Uniform distribution vs Normal distribution:
+--------------------------------------------
+Normal Distribution is a probability distribution where probability of x is highest at centre and lowest in the ends whereas in Uniform Distribution probability of x is constant. ... Uniform Distribution is a probability distribution where probability of x is constant.
+
+      Diagram
+
+
+2. rand():
+----------
+It will generates random float values in the range [0,1) from uniform distribution samples.
+
+np.random.rand() --->a single float value
+
+>>> np.random.rand()
+0.8120549440326994
+>>> np.random.rand()
+0.38273484920797385
+>>> np.random.rand()
+0.6674923918787643
+>>> np.random.rand()
+0.6895876701908819
+>>> np.random.rand()
+0.6462006096485643
+>>> np.random.rand()
+0.9098768943342903
+>>> np.random.rand()
+0.9362490328984621
+>>> np.random.rand()
+0.10852373644592084
+
+1-D array:
+----------
+np.random.rand(10)
+
+2-D array:
+>>> np.random.rand(3,5)
+array([[0.33078624, 0.3070355 , 0.19368932, 0.22608363, 0.13782822],
+       [0.78162618, 0.4927585 , 0.39567571, 0.15164908, 0.49992492],
+       [0.54410989, 0.67688525, 0.06385654, 0.87085947, 0.00411324]])
+
+
+Sir we will get float value in range from 0 to 1?? we can't pass range???
+
+uniform():
+---------
+rand()--->range is always [0,1)
+uniform() --->customize range
+
+uniform(low=0.0,high=1.0,size=None)
+
+
+np.random.uniform()
+
+
+>>> np.random.uniform(10,20)
+12.132400676377454
+
+
+n-D array creation:
+---------------------
+>>> np.random.uniform(10,20,size=10)
+array([19.24608642, 11.86686438, 14.68799523, 12.44187196, 12.82855603,
+       12.24848812, 13.68546172, 15.9568341 , 13.57338252, 17.26628507])
+>>> np.random.uniform(10,20,size=(3,5))
+array([[17.48770945, 19.67756564, 14.6127878 , 15.28743195, 16.96217632],
+       [10.35893547, 11.05416939, 16.49671437, 15.83282982, 15.8174664 ],
+       [10.37327606, 11.9681021 , 18.19431662, 14.12503342, 11.61109241]])
+>>> np.random.uniform(10,20,size=(2,3,2))
+array([[[16.12847065, 13.67096846],
+        [15.97964063, 19.00254701],
+        [17.45192196, 16.72231574]],
+
+       [[16.2757348 , 14.17440408],
+        [17.14606001, 13.50384673],
+        [10.01452353, 15.15903525]]])
+
+randint()
+rand()
+uniform(low,high)
+
+
+s = np.random.uniform(20,30,size=1000000)
+import matplotlib.pyplot as plt
+count, bins, ignored = plt.hist(s, 15, density=True)
+plt.plot(bins, np.ones_like(bins), linewidth=2, color='r')
+plt.show()
+
+
+4. randn():
+-----------
+values from normal distribution with mean 0 and varience is 1
+
+
+>>> np.random.randn(10)
+array([-2.01508925, -0.28026307, -0.1646846 , -0.48833416, -0.93808559,
+        1.14070496,  1.29201805, -1.35400766,  0.81779975, -0.13334964])
+>>> np.random.randn(2,3)
+array([[-1.26242305, -1.41742932, -0.76201615],
+       [ 0.29272704,  1.14245971,  0.79194175]])
+>>> np.random.randn(2,3,4)
+array([[[-0.13889006,  0.35716343, -1.39591255,  0.39167841],
+        [ 0.88693158,  1.03613745,  1.06677121,  0.57198922],
+        [-0.28978554, -1.08459609,  1.67696806, -0.70562164]],
+
+       [[ 0.38676079,  0.28203618,  0.12165762,  1.36922611],
+        [-0.92210469, -0.83345676,  0.6830381 , -1.08446142],
+        [ 0.8277217 , -0.2571676 ,  0.21365136, -0.11547937]]])
+
+
+randint()
+
+
+rand()--->uniform distribution in the range [0,1)
+uniform()--->uniform distribution in our provided range
+
+randn()--->normal distribution values with mean 0 and variance is 1
+normal()--->normal distribution values with our mean and variance.
+
+
+
+
+
+
+normal() function:
+------------------
+We can customize mean and varience .
+
+
+normal(loc=0.0, scale=1.0, size=None)
+
+    Draw random samples from a normal (Gaussian) distribution.
+
+
+
+>>> np.random.normal(10,4,size=10)
+array([10.84790681,  9.61363893,  8.84843827,  9.49880292,  5.75684037,
+       10.35347207, 10.55850404, 13.75850698,  5.78664002, 10.21131944])
+>>> np.random.normal(10,4,size=(2,3,4))
+array([[[11.91237354,  9.28093298,  9.13238368, 16.32420395],
+        [ 9.92394143, 11.60553826,  8.93651744, 12.34608286],
+        [ 9.73972687,  9.90505171, 13.78076301, 12.88354459]],
+
+       [[10.96347165,  9.01584661, 10.6117083 , 15.6380222 ],
+        [ 4.49485441,  7.50903271,  4.92598954, 10.56220944],
+        [ 7.49738784,  9.71428346,  6.42993589, 14.21750888]]])
+
+
+s = np.random.normal(10,4,1000000)
+import matplotlib.pyplot as plt
+count, bins, ignored = plt.hist(s, 15, density=True)
+plt.plot(bins, np.ones_like(bins), linewidth=2, color='r')
+plt.show()
+
+
+
+randint()
+
+rand()
+uniform()
+
+
+randn()
+normal()
+
+
+
+
+Array By using random library:
+------------------------------
+An array with random int values in the given range--->np.random.randint()
+
+An array with random float values in the range[0,1) from uniform distribution--->np.random.rand()
+
+An array with random float values in the specified range from uniform distribution--->np.random.uniform()
+
+An array with random float values with mean 0 and standard deviation 1 from normal distribution--->np.random.randn()
+
+An array with random float values with specified mean and standard deviation from normal distribution--->np.random.normal()
+
+
+Uniform distribution vs Normal distribution:
+--------------------------------------------
+Normal Distribution is a probability distribution where probability of x is highest at centre and lowest in the ends whereas in Uniform Distribution probability of x is constant. ... Uniform Distribution is a probability distribution where probability of x is constant.
+
+      Diagram
+
+
+randint()
+rand()
+uniform()
+randn()
+normal()
+
+shuffle():
+---------
+shuffle(x)
+
+a = np.arange(9)
+
+for 2-D arrays:
+---------------
+This function only shuffles the array along the first axis of a
+    multi-dimensional array(axis-0). The order of sub-arrays is changed but
+    their contents remains the same.
+
+a = np.randint(1,101,size=(6,5))
+
+>>> a = np.random.randint(1,101,size=(6,5))
+>>> a
+array([[20, 87, 85, 18, 64],
+       [77, 31, 23, 80,  9],
+       [42, 86, 17, 46,  7],
+       [65, 89, 99, 26, 27],
+       [94, 55, 61, 78,  7],
+       [82, 26, 20, 16, 95]])
+>>> np.random.shuffle(a)
+>>> a
+array([[77, 31, 23, 80,  9],
+       [65, 89, 99, 26, 27],
+       [82, 26, 20, 16, 95],
+       [94, 55, 61, 78,  7],
+       [42, 86, 17, 46,  7],
+       [20, 87, 85, 18, 64]])
+
+axis-0
+
+2-D array: (3,5)
+axis-0--->No of rows
+axis-1--->no of columns
+
+
+eg: For 3-D array
+shape: (4,3,4)
+4 --->2-D arrays are there(axis-0)
+3 rows are there in every 2-D(axis-1)
+4 columns in every 2-D array(axis-2)
+
+Diagram
+
+If we apply shuffle for 3-D array, then the order of 2-D arrays will be changed but not its internal content.
+
+>>> a = np.arange(48).reshape(4,3,4)
+>>> a
+array([[[ 0,  1,  2,  3],
+        [ 4,  5,  6,  7],
+        [ 8,  9, 10, 11]],
+
+       [[12, 13, 14, 15],
+        [16, 17, 18, 19],
+        [20, 21, 22, 23]],
+
+       [[24, 25, 26, 27],
+        [28, 29, 30, 31],
+        [32, 33, 34, 35]],
+
+       [[36, 37, 38, 39],
+        [40, 41, 42, 43],
+        [44, 45, 46, 47]]])
+ >>> np.random.shuffle(a)
+>>> a
+array([[[12, 13, 14, 15],
+        [16, 17, 18, 19],
+        [20, 21, 22, 23]],
+
+       [[36, 37, 38, 39],
+        [40, 41, 42, 43],
+        [44, 45, 46, 47]],
+
+       [[ 0,  1,  2,  3],
+        [ 4,  5,  6,  7],
+        [ 8,  9, 10, 11]],
+
+       [[24, 25, 26, 27],
+        [28, 29, 30, 31],
+        [32, 33, 34, 35]]])
+
+Summary of random library functions:
+------------------------------------
+1. randint()--->To generate random int values in the given range.
+2. rand()--->To generate uniform distributed float values in [0,1)
+3. uniform()---> To generate uniform distributed float values in the given range.
+4. randn()--->normal distributed float values with mean 0 and standard deviation 1.
+5. normal()--->normal distributed float values with specified mean and standard deviation.
+6. shuffle()-->To shuffle order of elements in the given nd array.
+
+
+
+
+Numpy Array creation:
+1. array()
+2. arange()
+3. linspace()
+4. zeros()
+5. ones()
+6. full()
+7. eye()
+8. identity()
+9. empty()
+10 random library functions
+     randint()
+     rand()
+     uniform()
+     randn()
+     normal()
+     shuffle()
+
+Array Attributes:
+------------------
+1. a.ndim--->returns the dimension of the array
+2. a.shape-->Return shape of the array(10,)  (2,3,4)
+3. size---->To get total number of elements
+4. dtype --->To get data type of array elements
+5. itemsize--->4 Bytes
+
+[10,20,30,40]
+
+
+>>> a.shape
+(4,)   
+
+
+>>> a = np.array([10,20,30,40])
+>>> a.ndim
+1
+>>> a.shape
+(4,)
+>>> a.dtype
+dtype('int32')
+>>> a.size
+4
+>>> a.itemsize
+4
+
+>>> a = np.array([[10,20,30],[40,50,60],[70,80,90]],dtype='float')
+>>> a
+array([[10., 20., 30.],
+       [40., 50., 60.],
+       [70., 80., 90.]])
+>>> a.ndim
+2
+>>> a.shape
+(3, 3)
+>>> a.size
+9
+>>> a.dtype
+dtype('float64')
+>>> a.itemsize
+8
+
+
+Numpy Data Types:
+-----------------
+In Python : int,float,complex,bool,str etc
+
+But in Numpy there are some extra data types also
+
+i--->integer(int8,int16,int32,int64)
+b--->boolean
+u--->unsigned integer(uint8,uint16,uint32,uint64)
+f--->float(float16,float32,float64)
+c--->complex(complex64,complex128)
+s-->String
+U--->Unicode String
+M-->datetime
+etc
+
+
+int8:
+-----
+The value will be represented by 8 bits.
+MSB is reserved for sign.
+The range: -128 to 127
+
+int16:
+-----
+The value will be represented by 16 bits.
+MSB is reserved for sign.
+The range: -32768 to 32767
+
+
+int32:
+------
+The value will be represented by 32 bits.
+MSB is reserved for sign.
+The range: -2147483648 to 2147483647
+
+int64:
+-----
+The value will be represented by 64 bits.
+MSB is reserved for sign.
+The range: -9223372036854775808  to 9223372036854775807
+
+For efficient use of memory
+
+>>> a = np.array([10,20,30,40])
+>>> a
+array([10, 20, 30, 40])
+>>> import sys
+>>> sys.getsizeof(a)
+120
+>>> a = np.array([10,20,30,40],dtype=int8)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'int8' is not defined
+>>> a = np.array([10,20,30,40],dtype='int8')
+>>> sys.getsizeof(a)
+108
+
+How to check data type of elements of an array:
+----------------------------------------------
+dtype attribute
+
+arrayobj.dtype
+
+>>> a
+array([10, 20, 30, 40], dtype=int8)
+>>> a.dtype
+dtype('int8')
+
+How to create array with required data type:
+--------------------------------------------
+We have to use dtype argument.
+
+a = np.array([10,20,30,40],dtype='int8')
+a = np.array([10,20,30,40],dtype='int16')
+a = np.array([10,20,30,40],dtype='float32')
+
+
+a = np.array(['a',10,10.5],dtype=int)
+
+>>> a = np.array(['a',10,10.5],dtype=int)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: invalid literal for int() with base 10: 'a'
+
+How to convert the type of existing array:
+------------------------------------------
+1st way:
+We have to use astype() method.
+
+>>> a = np.array([10,20,30,40])
+>>> a
+array([10, 20, 30, 40])
+>>> b = a.astype('float64')
+>>> b
+array([10., 20., 30., 40.])
+>>> a.dtype
+dtype('int32')
+>>> b.dtype
+dtype('float64')
+
+
+2nd way:
+-------
+float64() function
+int()
+float()
+str()
+bool()
+
+>>> a = np.array([10,20,30,40])
+>>> a
+array([10, 20, 30, 40])
+
+>>> a
+array([10, 20, 30, 40])
+>>> a.dtype
+dtype('int32')
+>>> f = np.float64(a)
+>>> f
+array([10., 20., 30., 40.])
+>>> f.dtype
+dtype('float64')
+
+
+
+>>> a = np.array([10,0,20,0,30])
+>>> a
+array([10,  0, 20,  0, 30])
+>>> a.dtype
+dtype('int32')
+>>> x = np.bool(a)
+<stdin>:1: DeprecationWarning: `np.bool` is a deprecated alias for the builtin `bool`. To silence this warning, use `bool` by itself. Doing this will not modify any behavior and is safe. If you specifically wanted the numpy scalar type, use `np.bool_` here.
+Deprecated in NumPy 1.20; for more details and guidance: https://numpy.org/devdocs/release/1.20.0-notes.html#deprecations
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+>>> x = np.bool_(a)
+>>> x
+array([ True, False,  True, False,  True])
+
+
+Numpy Introduction
+Creation of Numpy Arrays
+Array Attributes
+Data Types
+How to get/access elements of Numpy Array:
+------------------------------------------
+
+1. Indexing--->only one element
+2. Slicing--->group of elements
+3. Advanded Indexing
+
+1. Indexing:
+------------
+By using index, we can get/access single element of the array.
+Zero Based indexing. ie the index of first element is 0
+supports both +ve and -ve indexing.
+
+
+From 1-D array:
+---------------
+a[index]
+
+a = np.array([10,20,30,40,50])
+
+>>> a = np.array([10,20,30,40,50])
+>>> a
+array([10, 20, 30, 40, 50])
+>>> a[0]
+10
+>>> a[1]
+20
+>>> a[-1]
+50
+
+>>> a[10]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: index 10 is out of bounds for axis 0 with size 5
+
+Accessing elements from 2D array:
+--------------------------------
+a[rowindex][columnindex]
+
+
+a = np.array([[10,20,30],[40,50,60]])
+
+
+>>> a = np.array([[10,20,30],[40,50,60]])
+>>> a
+array([[10, 20, 30],
+       [40, 50, 60]])
+
+To access 50:
+-------------
+a[1][1]
+a[-1][-2]
+a[1][-2]
+a[-1][1]
+
+
+To access 30:
+-------------
+a[0][2]
+a[-2][-1]
+a[0][-1]
+a[-2][2]
+
+Accessing elements of 3-D array:
+--------------------------------
+3-D array means collection of 2-D arrays
+
+(2,3,4)
+
+
+a[i][j][k]
+   i--->represents which 2-D array(index of 2-D array) | can be either +ve or -ve
+   j--->represents row index in that 2-D array | can be either +ve or -ve
+   k--->represents column index in that 2-D array | can be either +ve or -ve
+
+a[0][1][2]
+
+0 indexed 2-D  array
+In that 2-D array 1 indexed row and 2 indexed column
+
+
+l = [[[1,2,3],[4,5,6],[7,8,9]],[[10,11,12],[13,14,15],[16,17,18]]]
+a = np.array(l)
+
+
+
+
+
+Shape: (2,3,3)
+a[i][j][k]
+   i--->represents which 2-D array(index of 2-D array) | can be either +ve or -ve
+   j--->represents row index in that 2-D array | can be either +ve or -ve
+   k--->represents column index in that 2-D array | can be either +ve or -ve
+
+
+3-D array contains 3-axeses
+
+axis-0--->represents the number of 2-D arrays
+axis-1--->Row index
+axis-2--->column index
+
+
+Accessing elements of 4-D array:
+--------------------------------
+(2,3,4,5)
+
+4-D array contains multiple 3-D arrays
+Every 3-D array contains multiple 2-D arrays
+Every 2-D array contains rows and columns
+
+(i,j,k,l)
+(2,3,4,5)
+
+2--->represents the number of 3-D arrays
+3--->Every 3-D array contains 3  2-D arrays
+Every 2-D array contains 4 rows and 5 columns
+
+a[i][j][k][l]
+
+i--->Represents which 3-D array
+j--->In that 3-D array which 2-D array
+k--->row index
+l-->column index
+
+a = np.arange(1,121).reshape(2,3,4,5)
+
+
+Bhavani
+durgasoftonline@gmail.com
+durgasoftonlinetraining@gmail.com
++91-9927372737
++91-8885252627
+
+
+
+Accessing elements of ndarray By using slice operator:
+------------------------------------------------------
+Python's slice operator:
+------------------------
+Slice -->small piece|part
+
+l = [10,20,30,40,50,60,70]
+
+syntax-1:
+l[begin:end]
+  It returns elements from begin index to end-1 index
+
+l[2:6]--->from 2nd index to 5th index
+l[-6:-2]--->From -6 index to -3 index
+
+If we are not specifying begin index then default is 0
+l[:3] --->from 0 index to 2nd index
+
+If we are not specifying end index then default is upto last
+l[2:]
+
+l[:]--->complete list
+
+Note: slice operator won't raise any IndexError
+>>> l[2:10000]
+[30, 40, 50, 60, 70, 80, 90, 100]
+
+>>> l
+[10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+>>> l[2:10000]
+[30, 40, 50, 60, 70, 80, 90, 100]
+>>> l[10000:20000]
+[]
+
+Syntax-2:
+l[begin:end:step]
+Default value for step is: 1
+
+l[2:8]--->from 2nd index to 7th index
+l[2:8:1]--->from 2nd index to 7th index
+l[2:8:2]--->from 2nd index to 7th index, every 2nd element will be considered
+l[2:8:3]--->from 2nd index to 7th index, every 3rd element will be considered
+
+>>> l = [10,20,30,40,50,60,70,80,90,100]
+>>> l[2:8]
+[30, 40, 50, 60, 70, 80]
+>>> l[2:8:1]
+[30, 40, 50, 60, 70, 80]
+>>> l[2:8:2]
+[30, 50, 70]
+>>> l[2:8:3]
+[30, 60]
+>>> l[::3]
+[10, 40, 70, 100]
+
+Note:
+1. For begin,end and step we can take both positive and negative values.
+But for step we cannot take zero
+>>> l[2:7:0]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: slice step cannot be zero
+
+If step value is +ve then we have to consider elements from begin to end-1 in forward direction.
+
+If step value is -ve then we have to consider elements from begin to end+1 in backward direction. 
+
+2. In forward direction, if end value is 0 then result is always empty.
+3. In backward direction, if end value is -1 then result is always empty.
+
+4. All three parameters are optional.
+
+
+l[::-1]--->Total list in reverse[100,90,....0]
+
+
+>>> l[::-1]
+[100, 90, 80, 70, 60, 50, 40, 30, 20, 10]
+>>> l[::-2]
+[100, 80, 60, 40, 20]
+
+Slice Operator on 1-D Numpy Array:
+----------------------------------
+a[begin:end:step]
+
+Same rules of python's slice operator are applicable here
+a[2:5]
+
+>>> a = np.arange(10,101,10)
+>>> a
+array([ 10,  20,  30,  40,  50,  60,  70,  80,  90, 100])
+>>> a[2:5]
+array([30, 40, 50])
+>>> a[::1]
+array([ 10,  20,  30,  40,  50,  60,  70,  80,  90, 100])
+>>> a[::-1]
+array([100,  90,  80,  70,  60,  50,  40,  30,  20,  10])
+>>> a[::-2]
+array([100,  80,  60,  40,  20])
+
+a[2:5] --->from 2nd index to 4th index
+
+
+
+
+a[5:-8]  --->from begin to end-1
+         --->from 5th to -9th index
+
+Slice operator on 2-D arrays:
+-----------------------------
+a[row,column]
+a[begin:end:step, begin:end:step]
+
+
+a = np.array([[10,20],[30,40],[50,60]])
+>>> a[0:1,:]
+array([[10, 20]])
+
+a[::2,:]
+
+
+
+a[0:2,1:2]
+a[:2,1:]
+
+>>> a = np.array([[10,20],[30,40],[50,60]])
+>>> a
+array([[10, 20],
+       [30, 40],
+       [50, 60]])
+>>> a[0:1,:]
+array([[10, 20]])
+>>> a[0,:]
+array([10, 20])
+>>> a[::2,:]
+array([[10, 20],
+       [50, 60]])
+>>> a[0:2,1:2]
+array([[20],
+       [40]])
+>>> a[:2,1:]
+array([[20],
+       [40]])
+
+
+eg-2: 
+a = np.array([[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]])
+
+>>> a = np.array([[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]])
+>>> a
+array([[ 1,  2,  3,  4],
+       [ 5,  6,  7,  8],
+       [ 9, 10, 11, 12],
+       [13, 14, 15, 16]])
+>>> a[0:2,:]
+array([[1, 2, 3, 4],
+       [5, 6, 7, 8]])
+>>> a[:2,:]
+array([[1, 2, 3, 4],
+       [5, 6, 7, 8]])
+>>> a[::3,:]
+array([[ 1,  2,  3,  4],
+       [13, 14, 15, 16]])
+>>> a[:,0:2]
+array([[ 1,  2],
+       [ 5,  6],
+       [ 9, 10],
+       [13, 14]])
+>>> a[:,::2]
+array([[ 1,  3],
+       [ 5,  7],
+       [ 9, 11],
+       [13, 15]])
+>>> a[1:3,1:3]
+array([[ 6,  7],
+       [10, 11]])
+>>> a[::3,::3]
+array([[ 1,  4],
+       [13, 16]])
+
+Slice Operator on 3D array:
+---------------------------
+(2,3,4)
+
+
+2 --->number of 2D arrays
+3--->The number of rows
+4--->The number of columns
+
+l = [[[1,2,3,4],[5,6,7,8],[9,10,11,12]],[[13,14,15,16],[17,18,19,20],[21,22,23,24]]]
+a = np.array(l)
+
+
+a[i,j,k]
+
+a[begin:end:step,begin:end:step,begin:end:step]
+
+a[:,:,0:1]
+a[:,:,:1]
+
+
+a[:,0:1,:]
+a[:,:1,:]
+
+
+a[:,::2,:]
+
+
+begin:end:step
+
+::2
+
+
+
+a[:,0:2,1:3]
+
+
+
+
+a[:,::2,::3]
+
+
+To use slice operator, compulsory elements should be in order. We cannot select elements which are out of order. ie we cannot select arbitrary elements.
+
+Advanced Indexing:
+------------------
+By using index, we can access only one element at a time.
+a[i], a[i][j], a[i][j][k]
+
+By using slice operator we can access multiple elements at a time, but all elements should be in order.
+
+a[begin:end:step]
+a[begin:end:step,begin:end:step]
+a[begin:end:step,begin:end:step,begin:end:step]
+
+
+To access arbitraty elements we should go for Advanced Indexing.
+
+Accessing multiple arbitrary elements:
+---------------------------------------
+1-D array:
+----------
+array[x]
+    x can be either ndarray or list, which represents required indexes.
+
+a = np.arange(10,101,10)
+
+[2,4,5,8]
+
+
+1st way:
+-------
+create ndarray with required indices.
+indices = np.array([2,4,5,8])
+
+pass this indices array as argument to original array
+a[indices]
+
+>>> a
+array([ 10,  20,  30,  40,  50,  60,  70,  80,  90, 100])
+>>> indices
+array([2, 4, 5, 8])
+>>> a[indices]
+array([30, 50, 60, 90])
+
+2nd way:
+--------
+l = [2,4,5,8]
+a[l]
+
+>>> l = [2,4,5,8]
+>>> a[l]
+array([30, 50, 60, 90])
+
+
+>>> a[[0,4,6,9]]
+array([ 10,  50,  70, 100])
+
+
+a[[0,9,4,6]]
+
+
+
+Accessing elements of 2-D array:
+--------------------------------
+l = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
+a = np.array(l)
+
+
+Syntax:
+-------
+a[[row_indices],[column_indices]]
+a[[0,1,2,3],[0,1,2,3]]
+   It select elements from (0,0),(1,1),(2,2) and (3,3)
+
+
+
+L-shape
+>>> a[[0,1,2,3,3,3,3],[0,0,0,0,1,2,3]]
+array([ 1,  5,  9, 13, 14, 15, 16])
+
+
+
+Note: In advanced indexing, the required elements will be selected based on indices and with those elements a 1-D array will be created. The result of advanced indexing is always 1-D array only.
+
+Observations:
+-------------
+1. a[[0,1,2],[0,1]]
+
+IndexError: shape mismatch: indexing arrays could not be broadcast together with shapes (3,) (2,)
+
+
+2. a[[0,1],[0,1,2]]
+
+IndexError: shape mismatch: indexing arrays could not be broadcast together with shapes (2,) (3,)
+
+3. a[[0,1,2],[0]]
+>>> a[[0,1,2],[0]]
+array([1, 5, 9])
+
+4. a[[0],[0,1,2]]
+
+>>> a[[0],[0,1,2]] --->(0,0),(0,1),(0,2)
+array([1, 2, 3])
+
+Accessing elements of 3-D array:
+--------------------------------
+
+l = [[[1,2,3,4],[5,6,7,8],[9,10,11,12]],[[13,14,15,16],[17,18,19,20],[21,22,23,24]]]
+a = np.array(l)
+
+
+a[i][j][k]
+   i represents the index of 2-D array
+   j represents row index
+   k represents column index
+
+
+
+Syntax:
+-------
+a[[indices of 2d array],[row indices],[column indices ]]
+
+a[[0,1],[1,1],[2,1]]
+The selected elements will be present at: (0,1,2) and (1,1,1)
+
+To access elements from 1-D array:
+-----------------------------------
+a[x]
+   x can be either ndarray or list of indices
+
+2. for 2-D array:
+a[[row_indices],[column_indices]]
+
+3. For 3-D array:
+
+a[[indices of 2-D array],[row_indices],[column_indices]]
+
+Condition based selection:
+--------------------------
+We can select elements based on some condition also.
+
+Syntax: array[boolean_array]
+
+in the boolean array, where ever True present, the corresponding value will be selcted.
+
+a = np.array([10,20,30,40])
+
+
+>>> a = np.array([10,20,30,40])
+>>> a
+array([10, 20, 30, 40])
+>>> boolean_array=np.array([True,False,False,True])
+>>> boolean_array
+array([ True, False, False,  True])
+>>> a[boolean_array]
+array([10, 40])
+
+
+
+
+a = np.array([10,20,30,40])
+Select elements which are greater than 25
+[False,False,True,True]
+
+
+>>> a>25
+array([False, False,  True,  True])
+>>> b_a = a>25
+>>> a[b_a]
+array([30, 40])
+
+
+>>> a[a>25]
+array([30, 40])
+
+
+a = np.array([10,-5,20,40,-3,-1,75])
+
+1. Select all elements which are <0?
+a[a<0]
+
+
+
+>>> a
+array([10, -5, 20, 40, -3, -1, 75])
+>>> a[a<0]
+array([-5, -3, -1])
+>>> a[a>0]
+array([10, 20, 40, 75])
+>>> a[a%2==0]
+array([10, 20, 40])
+>>> a[a%2!=0]
+array([-5, -3, -1, 75])
+>>> a[a%5==0]
+array([10, -5, 20, 40, 75])
+
+Condition based selection is applicable for 2-D array also
+
+>>> a = np.arange(1,26).reshape(5,5)
+>>> a
+array([[ 1,  2,  3,  4,  5],
+       [ 6,  7,  8,  9, 10],
+       [11, 12, 13, 14, 15],
+       [16, 17, 18, 19, 20],
+       [21, 22, 23, 24, 25]])
+>>> a[a%2==0]
+array([ 2,  4,  6,  8, 10, 12, 14, 16, 18, 20, 22, 24])
+>>> a[a%10==0]
+array([10, 20])
+
+Slicing vs Advanced Indexing:
+----------------------------
+Case-1: Python's slicing:
+-----------------
+In the case of list, slice operator will create a separate copy.
+If we perform any changes in one copy those changes won't be reflected in other copy.
+
+>>> l = [10,20,30,40]
+>>> l2=l[::]
+>>> l2
+[10, 20, 30, 40]
+>>> l
+[10, 20, 30, 40]
+>>> l2
+[10, 20, 30, 40]
+>>> l2[1]=7777
+>>> l2
+[10, 7777, 30, 40]
+>>> l
+[10, 20, 30, 40]
+>>> l[0]=8888
+>>> l
+[8888, 20, 30, 40]
+>>> l2
+[10, 7777, 30, 40]
+
+
+Case-2: Numpy Array Slicing:
+--------------------
+A separate copy won't be created and just we are getting view of the original copy.
+
+Table  and  View
+View is logical entity where as Table is physical entity.
+
+
+a = np.arange(10,101,10)
+>>> a = np.arange(10,101,10)
+>>> a
+array([ 10,  20,  30,  40,  50,  60,  70,  80,  90, 100])
+>>> b = a[0:4]
+>>> b
+array([10, 20, 30, 40])
+>>> a[0]=7777
+>>> a
+array([7777,   20,   30,   40,   50,   60,   70,   80,   90,  100])
+>>> b
+array([7777,   20,   30,   40])
+>>> b[1]=8888
+>>> b
+array([7777, 8888,   30,   40])
+>>> a
+array([7777, 8888,   30,   40,   50,   60,   70,   80,   90,  100])
+
+
+Case-3: Advanced Indexing and Condition Based Selection:
+--------------------------------------------------------
+It will select required elements based on provided index or condition and with those elements a new 1-D array object will be created.
+
+The output is always a new 1-D array only.
+
+
+>>> a = np.arange(10,101,10)
+>>> a
+array([ 10,  20,  30,  40,  50,  60,  70,  80,  90, 100])
+>>> b = a[[0,2,5]]
+>>> b
+array([10, 30, 60])
+>>> a
+array([ 10,  20,  30,  40,  50,  60,  70,  80,  90, 100])
+>>> a[0]=7777
+>>> a
+array([7777,   20,   30,   40,   50,   60,   70,   80,   90,  100])
+>>> b
+array([10, 30, 60])
+>>> b[1]=9999
+>>> b
+array([  10, 9999,   60])
+>>> a
+array([7777,   20,   30,   40,   50,   60,   70,   80,   90,  100])
+
+----------------------------
+Summary of Syntaxes:
+--------------------
+1. Basic Indexing:
+------------------
+a[i],a[i][j],a[i][j][k]
+a[i],a[i,j],a[i,j,k]
+
+2. Slicing:
+-----------
+a[begin:end:step]  for 1-D
+a[begin:end:step,begin:end:step]  for 2-D
+a[begin:end:step,begin:end:step,begin:end:step]  for 3-D
+
+3. Advanced Indexing:
+---------------------
+1.a[x]  for 1-D array---> x can be ndarray or list which contains indices.
+   eg: a[[0,1,2]]
+2. a[[row indices],[column indices]] for 2-D
+3. a[[indices of 2D array],[row indices],[column indices]] for 3-D
+
+4. Condition based Selection:
+----------------------------
+a[condition]  eg: a[a>0]
+
+How to Iterate elements of the ndarray:
+--------------------------------------
+Iteration means getting all elements one by one.
+
+3 ways
+1. By using Python's loops concept
+2. By using nditer() function
+3. By using ndenumerate() function
+
+1. By using Python's loops concept:
+-----------------------------------
+To iterate elements of 1-D array:
+--------------------------------
+import numpy as np
+a = np.arange(10,51,10)
+for x in a:
+	print(x)
+
+
+To iterate elements of 2-D array:
+--------------------------------
+import numpy as np
+a = np.array([[10,20,30],[40,50,60],[70,80,90]])
+for x in a: #x is 1-D array but not scalar value
+	for y in x: # y is scalar value present in 1-D array
+		print(y)
+
+To iterate elements of 3-D array:
+--------------------------------	
+import numpy as np
+a = np.array([[[10,20],[30,40]],[[50,60],[70,80]]])
+for x in a: #x is 2-D array but not scalar value
+	for y in x: # y is 1-D array but not scalar value
+		for z in y: # z is scalar value
+			print(z)
+	
+
+Note: To iterate elements of n-D array, we require n loops.
+nditer() function
+
+By using Numpy's nditer() function:
+-----------------------------------
+Advantage: For any n-D array only one loop is enough.
+
+nditer is a class present in numpy library.
+nditer() --->Creating an object of nditer class.
+
+
+1-D array:
+import numpy as np
+a = np.arange(10,51,10)
+for x in np.nditer(a):
+	print(x)
+
+2-D array:
+---------
+import numpy as np
+a = np.array([[10,20,30],[40,50,60],[70,80,90]])
+for x in np.nditer(a):
+	print(x)
+
+3-D array:
+----------
+import numpy as np
+a = np.array([[[10,20],[30,40]],[[50,60],[70,80]]])
+for x in np.nditer(a):
+	print(x)
+
+Iterate elements of sliced array:
+---------------------------------
+import numpy as np
+a = np.array([[10,20,30],[40,50,60],[70,80,90]])
+for x in np.nditer(a[:,:2]):
+	print(x)
+
+Using nditer() to get elements of required data type:
+----------------------------------------------------
+We have to use op_dtypes
+
+
+import numpy as np
+a = np.array([[10,20,30],[40,50,60],[70,80,90]])
+for x in np.nditer(a,flags=['buffered'],op_dtypes=['float']):
+	print(x)
+print(a)
+
+
+Normal Python's loops vs nditer()
+----------------------------------
+1. n loops are required
+1. only one loop is enough
+
+2. There is no way to specify our required dtype
+2. There is a way to specify our required dtype. For this we have to use op_dtypes argument.
+
+
+3. By using ndenumerate() function:
+-----------------------------------
+If we want to find coordinates also inaddition to elements
+
+array indices(coordinates) and values
+
+eg-1: Iterate elements of 1-D array:
+------------------------------------
+import numpy as np
+a = np.array([10,20,30,40,50,60,70])
+for pos,element in np.ndenumerate(a):
+	print(f'{element} element present at index/position:{pos}')
+
+10 element present at index/position:(0,)
+20 element present at index/position:(1,)
+30 element present at index/position:(2,)
+40 element present at index/position:(3,)
+50 element present at index/position:(4,)
+60 element present at index/position:(5,)
+70 element present at index/position:(6,)
+
+eg-2: Iterate elements of 2-D array:
+-------------------------------------
+import numpy as np
+a = np.array([[10,20,30],[40,50,60],[70,80,90]])
+for pos,element in np.ndenumerate(a):
+	print(f'{element} element present at index/position:{pos}')
+
+D:\durgaclasses>py test.py
+10 element present at index/position:(0, 0)
+20 element present at index/position:(0, 1)
+30 element present at index/position:(0, 2)
+40 element present at index/position:(1, 0)
+50 element present at index/position:(1, 1)
+60 element present at index/position:(1, 2)
+70 element present at index/position:(2, 0)
+80 element present at index/position:(2, 1)
+90 element present at index/position:(2, 2)
+
+
+python's normal loop
+nditer()
+ndenumerate()
+
+Basic Indexing
+Slicing
+Advanced Indexing
+Condition Based Selection
+
+Arithmetic Operators:
+---------------------
++,-,*,/,//,%,**
+
+10+20 --->30
+20-10--->10
+10*20--->200
+10%2-->0
+10**2 --->100
+
+/---->Normal Division Operator --->Result is always float
+// --->Floor division operator
+
+
+10/2 --->5.0
+10/3-->3.333333
+
+Normal division opeartor(/) always returns float value only.
+Floor division operator(//) can return both int and float
+
+If both arguments are int type then result is int
+If atleast one argument is float type then result is float
+
+10//2-->5
+10//3-->3
+
+10.0//2-->5.0
+10.0//3--->3.0
+
+
+15/4 --->3.75
+15.0/4-->3.75
+
+
+15//4--->3
+15.0//4--->3.0
+
+
+15.0//4--->3.0
+
+
+
+1. Arrays with scalar
+2. Arrays with Arrays
+
+
+1. Arrays with scalar value:
+----------------------------
+scalar value  means constant value like 3 or 4
++,-,*,**,%,/,//
+
+All these operations will be performed at element level.
+
+eg: for 1-D array
+----------------
+>>> a = np.array([10,20,30,40])
+>>> a+2
+array([12, 22, 32, 42])
+>>> a-2
+array([ 8, 18, 28, 38])
+>>> a*2
+array([20, 40, 60, 80])
+>>> a**2
+array([ 100,  400,  900, 1600], dtype=int32)
+>>> a%2
+array([0, 0, 0, 0], dtype=int32)
+>>> a/2
+array([ 5., 10., 15., 20.])
+>>> a//2
+array([ 5, 10, 15, 20], dtype=int32)
+
+for 2-D array:
+--------------
+>>> a = np.array([[10,20,30],[40,50,60]])
+>>> a
+array([[10, 20, 30],
+       [40, 50, 60]])
+>>> a+2
+array([[12, 22, 32],
+       [42, 52, 62]])
+>>> a-2
+array([[ 8, 18, 28],
+       [38, 48, 58]])
+>>> a*2
+array([[ 20,  40,  60],
+       [ 80, 100, 120]])
+>>> a/2
+array([[ 5., 10., 15.],
+       [20., 25., 30.]])
+>>> a//2
+array([[ 5, 10, 15],
+       [20, 25, 30]], dtype=int32)
+>>> a%2
+array([[0, 0, 0],
+       [0, 0, 0]], dtype=int32)
+>>> a**2
+array([[ 100,  400,  900],
+       [1600, 2500, 3600]], dtype=int32)
+
+
+In Python,
+---------
+Anything by zero including zero/zero also result is always: 
+ZeroDivisionError
+
+>>> 10/0
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ZeroDivisionError: division by zero
+>>> 0/0
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ZeroDivisionError: division by zero
+
+
+In Numpy we won't get ZeroDivisionError
+10/0 --->Infinity(inf)
+0/0---->undefined(nan--->not a number)
+
+
+>>> a = np.arange(6)
+>>> a
+array([0, 1, 2, 3, 4, 5])
+>>> a+2
+array([2, 3, 4, 5, 6, 7])
+>>> a-2
+array([-2, -1,  0,  1,  2,  3])
+>>> a/0
+<stdin>:1: RuntimeWarning: divide by zero encountered in true_divide
+<stdin>:1: RuntimeWarning: invalid value encountered in true_divide
+array([nan, inf, inf, inf, inf, inf])
+>>>
+
+
+
+l = [10,20,30,40,50,60]
+l/2
+
+
+Array with Array:
+-----------------
+a = np.array([1,2,3,4])
+b = np.array([10,20,30,40])
+
+>>> a
+array([1, 2, 3, 4])
+>>> b
+array([10, 20, 30, 40])
+>>> a+b
+array([11, 22, 33, 44])
+>>> a-b
+array([ -9, -18, -27, -36])
+>>> a*b
+array([ 10,  40,  90, 160])
+>>> b/a
+array([10., 10., 10., 10.])
+>>> b//a
+array([10, 10, 10, 10], dtype=int32)
+
+eg-2:
+>>> a = np.array([[1,2],[3,4]])
+>>> b = np.array([[5,6],[7,8]])
+>>> a
+array([[1, 2],
+       [3, 4]])
+>>> b
+array([[5, 6],
+       [7, 8]])
+>>> a+b
+array([[ 6,  8],
+       [10, 12]])
+>>> a-b
+array([[-4, -4],
+       [-4, -4]])
+>>> a*b
+array([[ 5, 12],
+       [21, 32]])
+>>> b/a
+array([[5.        , 3.        ],
+       [2.33333333, 2.        ]])
+
+eg-3: 
+a = np.array([10,20,30,40])
+b = np.array([10,20,30,40,50])
+
+>>> a+b
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: operands could not be broadcast together with shapes (4,) (5,)
+
+
+a+b ===>np.add(a,b)
+a-b ===>np.subtract(a,b)
+a*b ===>np.multiply(a,b)
+a/b ===>np.divide(a,b)
+a//b ===>np.floor_divide(a,b)
+a%b ===>np.mod(a,b)
+a**b ===>np.power(a,b)
+
+
+
+
+
+>>> a
+array([10, 20, 30, 40])
+>>> b = np.array([10,20,30,40])
+>>> a
+array([10, 20, 30, 40])
+>>> b
+array([10, 20, 30, 40])
+>>> np.add(a,b)
+array([20, 40, 60, 80])
+>>> np.subtract(a,b)
+array([0, 0, 0, 0])
+>>> np.multiply(a,b)
+array([ 100,  400,  900, 1600])
+>>> np.divide(a,b)
+array([1., 1., 1., 1.])
+>>> np.floor_divide(a,b)
+array([1, 1, 1, 1], dtype=int32)
+>>> np.mod(a,b)
+array([0, 0, 0, 0], dtype=int32)
+
+Note: The functions which operates element by element on whole array, are called universal functions(ufunc). Hence all the above functions are ufuncs.
+
+
+
+what is the difference between np.dot() and np.multiply()?
+np.dot() -->Matrix Multiplication /dot product
+np.mulitply() -->Element Multiplication 
+
+Broadcasting:
+-------------
+Eventhough dimensions are different,shapes are different and sizes are different still some arithmetic operations are allowed. This is because of broadcasting.
+
+Broadcasting will be performed automatically by numpy itself.
+
+Rules for Broadcasting:
+-----------------------
+Rule-1: Make sure both arrays should have same dimension.
+Add 1's in the shape of fewer dimensional array on the left side, until both arrays have same dimension.
+
+eg-1:
+Before:
+(4,3)--->2D
+(3,)---->1D
+
+After:
+(4,3)--->2D
+(1,3)---->2D
+
+eg-2:
+Before:
+(3,2,2)--->3D
+(3,)---->1D
+
+After:
+-----
+(3,2,2)--->3D
+(1,1,3)---->3D
+
+Now both arrays have same dimension.
+
+Rule-2:
+-------
+If the size of 2 arrays does not match in any dimension,the array with size equal to 1 in that dimension is expanded/increases to match other size of the same dimension.
+
+
+In any dimension, the sizes are not matched and neither equal to 1, then we will get error.
+
+eg-1:
+Before
+(4,3)--->2D
+(1,3)---->2D
+
+After
+(4,3)--->2D
+(4,3)---->2D
+
+Now dimensions, shapes and sizes are equal.
+
+eg-2:
+Before:
+(3,2,2)--->3D
+(1,1,3)---->3D
+After:
+------
+(3,2,2)--->3D
+(3,2,3)---->3D
+
+Note: The data will be reused from the same input array.
+If the rows are required then reuse existing rows.
+If columns are required then reuse existing columns.
+
+
+The result is always higher dimension of input arrays.
+
+inputs: 3-D,1-D
+output: 3-D
+
+eg-1:
+a = np.array([10,20,30,40])
+b = np.array([1,2,3])
+a+b
+
+Rule-1:1-D and 1-D
+
+(4,)
+(3,)
+
+
+>>> a = np.array([10,20,30,40])
+>>> b = np.array([1,2,3])
+>>> a+b
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: operands could not be broadcast together with shapes (4,) (3,)
+
+
+eg-2:
+----
+a = np.array([10,20,30])
+b = np.array([40])
+
+Rule-1: satisfied
+Rule-2:
+(3,)
+(3,)
+
+
+>>> a = np.array([10,20,30])
+>>> b = np.array([40])
+>>> a+b
+array([50, 60, 70])
+
+eg-3:
+----
+a = np.array([[10,20],[30,40],[50,60]])--->2-D  shape:(3,2)
+b = np.array([10,20])--->1-D   shape:(2,)
+
+Rule-1:
+Before:
+(3,2)
+(2,)
+
+After:
+(3,2)
+(1,2)
+
+
+Rule-2:
+Before:
+(3,2)
+(1,2)
+After:
+(3,2)
+(3,2)
+
+
+
+
+>>> a = np.array([10,20,30])
+>>> b = np.array([40])
+>>> a+b
+array([50, 60, 70])
+>>> a = np.array([[10,20],[30,40],[50,60]])
+>>> b = np.array([10,20])
+>>> a
+array([[10, 20],
+       [30, 40],
+       [50, 60]])
+>>> b
+array([10, 20])
+>>> a
+array([[10, 20],
+       [30, 40],
+       [50, 60]])
+>>> b
+array([10, 20])
+>>> a+b
+array([[20, 40],
+       [40, 60],
+       [60, 80]])
+>>> a-b
+array([[ 0,  0],
+       [20, 20],
+       [40, 40]])
+>>> a*b
+array([[ 100,  400],
+       [ 300,  800],
+       [ 500, 1200]])
+>>> a/b
+array([[1., 1.],
+       [3., 2.],
+       [5., 3.]])
+>>> a//b
+array([[1, 1],
+       [3, 2],
+       [5, 3]], dtype=int32)
+>>> a%b
+array([[0, 0],
+       [0, 0],
+       [0, 0]], dtype=int32)
+
+eg-4:
+-----
+a = np.array([[10],[20],[30]])       ---->2-D, shape:(3,1)
+b = np.array([10,20,30])              ---->1-D, shape:(3,)
+
+Rule-1:
+Before:
+(3,1)
+(3,)
+
+After:
+(3,1)
+(1,3)
+
+Rule-2:
+Before:
+(3,1)
+(1,3)
+After:
+(3,3)
+(3,3)
+
+>>> a = np.array([[10],[20],[30]])
+>>> b = np.array([10,20,30])
+>>> a
+array([[10],
+       [20],
+       [30]])
+>>> b
+array([10, 20, 30])
+>>> a+b
+array([[20, 30, 40],
+       [30, 40, 50],
+       [40, 50, 60]])
+ 
+
+ Chapter-1: Basic Introduction to the Numpy
+Chapter-2: Creation of Numpy Arrays
+	1. array()
+	2. arange()
+	3. linspace()
+	4. zeros()
+	5. ones()
+	6. full()
+	7. eye()
+	8. identity()
+	9. diag()
+	10. empty()
+	11. random library functions
+	      1. randint()
+	      2. rand()
+	      3. uniform()
+	      4. randn()
+	      5. normal()
+	      6. shuffle()
+Chapter-3: Array Attributes & Numpy Data Types
+Chapter-4: Indexing, Slicing and Advanced Indexing
+      1. Basic Indexing -->To select only one element
+      2. Slicing--->To select multiple ordered elements
+      3. Advanced Indexing--->To select multiple arbitrary elements
+      4. Condition Based Selection --->a[condition]
+Chapter-5: How to iterate elements of the nd array
+		1. By using python's loops
+		2. By using numpy nditer() function
+		3. By using numpy ndenumerate() function
+Chapter-6: Arithmetic Operators
+    1. Arithmetic operators for Numpy arrays with scalar
+    2. Arithmetic operators for Arrays with Arrays
+Chapter-7: Broadcasting
+
+Array Manipulation Functions:
+----------------------------
+Chapter-8: Array Manipulation Functions
+        1. reshape()
+	2. resize()     
+	3. flatten()
+	4. flat variable
+	5. ravel()
+	6. transpose()
+	7. swapaxes()
+Chapter-9: Joining of multiple arrays into a single array
+	1. concatenate()
+	2. stack()
+	3. vstack()
+	4. hstack()
+	5. dstack()
+
+Chapter-9: Splitting of arrays
+	1. split()
+	2. vsplit()
+	3. hsplit()
+	4. dsplit()
+	  
+
+Chapter-10: Sorting Elements of nd arrays
+Chapter-11: Searching elements of ndarray
+Chapter-12: How to insert elements into ndarray?
+             1. insert()
+	     2. append()
+Chapter-13: How to delete elements from ndarray?
+
+1. reshape():
+-------------
+np.reshape(array,shape)
+array.reshape(shape)
+
+reshape: shape to another shape
+  (10,)---->(5,2),(2,5),(1,10),(10,1)
+  (24,)---->(3,8)--->(2,3,4),(6,4), (2,2,2,3)
+
+   1. The Data should not be changed.
+         input size and output size must be matched.
+	 otherwise ValueError
+   2. No change in the data.New array object won't be created.
+      Just we are getting view of existing object.
+      View but not copy.
+      If we perform any change in the original array, that change will be reflected to reshaped array. Viceversa.
+
+      Table(Physical)   and View(logical)
+
+3.  We can specify unknown dimension size as -1, but only once.
+    a =(12,)
+    b = (6,-1)===>(6,2)
+   
+    b = (-1,-1)
+
+
+a = 24
+b = np.reshape(a,(2,3,-1))
+b = np.reshape(a,(2,-1,4))
+b = np.reshape(a,(-1,3,4))
+
+b = np.reshape(a,(5,-1))
+
+4. reshape(a, newshape, order='C')
+
+C style--->Row major order(C)
+Fortran Style--->Column major order(F)
+
+
+eg-1:
+>>> a = np.arange(12).reshape(3,4)
+>>> a
+array([[ 0,  1,  2,  3],
+       [ 4,  5,  6,  7],
+       [ 8,  9, 10, 11]])
+>>> np.reshape(a,(12,))
+array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11])
+>>> np.reshape(a,(12,),'C')
+array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11])
+>>> np.reshape(a,(12,),'F')
+array([ 0,  4,  8,  1,  5,  9,  2,  6, 10,  3,  7, 11])
+
+eg-2: 
+>>> a = np.arange(24)
+>>> a
+array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16,
+       17, 18, 19, 20, 21, 22, 23])
+>>> np.reshape(a,(6,4))
+array([[ 0,  1,  2,  3],
+       [ 4,  5,  6,  7],
+       [ 8,  9, 10, 11],
+       [12, 13, 14, 15],
+       [16, 17, 18, 19],
+       [20, 21, 22, 23]])
+>>> np.reshape(a,(6,4),'C')
+array([[ 0,  1,  2,  3],
+       [ 4,  5,  6,  7],
+       [ 8,  9, 10, 11],
+       [12, 13, 14, 15],
+       [16, 17, 18, 19],
+       [20, 21, 22, 23]])
+>>> np.reshape(a,(6,4),'F')
+array([[ 0,  6, 12, 18],
+       [ 1,  7, 13, 19],
+       [ 2,  8, 14, 20],
+       [ 3,  9, 15, 21],
+       [ 4, 10, 16, 22],
+       [ 5, 11, 17, 23]])
+
+Conclusions:
+------------
+1. To reshape array without changing data.
+2. The sizes must be matched.
+3. We can use either numpy library function or ndarray class method.
+   np.reshape()
+   a.reshape()
+4. It won't create a new array object, just we will get view.
+5. We can use -1 in unknown dimension, but only once.
+6. order: 'C','F'
+
+resize() function:
+------------------
+output array: can be any dimension,any shape,any size
+
+1. input size and output size need not be matched.
+2. The data may be changed.
+3. we will get copy but not view
+4. How to get that new data:
+             np.resize()--->repeat elements of input array
+	     a.resize()--->use zero for extra elements
+4. -1 such type of story not applicable for resize()
+input: (10,)
+reshape: (5,-1)  valid
+resize: (5,-1)  invalid
+
+
+5. If we use ndarray class resize() method, inline modification will be happend.
+
+
+
+reshape:  view only. -1
+resize: 
+    np.resize()--->repeat elements of input array
+    a.resize()--->use 0
+
+
+a = np.arange(10)
+
+
+
+
+sir pls explain once why np.resize() is a function and other one is a method
+
+
+
+Difference between numpy.resize()  and ndarray.resize():
+--------------------------------------------------------
+
+
+
+Difference between reshape()  and resize():
+--------------------------------------------
+sir ndarray.resize it will not create new array right
+
+
+
+
+
+1. reshape()
+2. resize()
+
+
+3. flatten():
+-------------
+1-D,2-D,3-D,n-D
+
+1. convert any n-D array to 1-D array.
+2. It is method present in ndarray class but not numpy library function.
+   a.flatten()--->valid
+   np.flatten()-->invalid
+3.  a.flatten(order='C') 
+   C-style====>row major order
+   F-stype===>column major order
+
+4. It will create a new array and returns it (ie copy but not view)
+5. The output of flatten method is always 1D array
+
+
+
+
+>>> a = np.arange(6).reshape(3,2)
+>>> a
+array([[0, 1],
+       [2, 3],
+       [4, 5]])
+>>> a.flatten()
+array([0, 1, 2, 3, 4, 5])
+>>> a
+array([[0, 1],
+       [2, 3],
+       [4, 5]])
+>>> a.flatten('F')
+array([0, 2, 4, 1, 3, 5])
+>>> a
+array([[0, 1],
+       [2, 3],
+       [4, 5]])
+>>> b = a.flatten()
+>>> b
+array([0, 1, 2, 3, 4, 5])
+>>> a[0][0]=7777
+>>> a
+array([[7777,    1],
+       [   2,    3],
+       [   4,    5]])
+>>> b
+array([0, 1, 2, 3, 4, 5])
+>>> a = np.arange(1,19).reshape(3,3,2)
+>>> a.ndim
+3
+>>> a
+array([[[ 1,  2],
+        [ 3,  4],
+        [ 5,  6]],
+
+       [[ 7,  8],
+        [ 9, 10],
+        [11, 12]],
+
+       [[13, 14],
+        [15, 16],
+        [17, 18]]])
+>>> a
+array([[[ 1,  2],
+        [ 3,  4],
+        [ 5,  6]],
+
+       [[ 7,  8],
+        [ 9, 10],
+        [11, 12]],
+
+       [[13, 14],
+        [15, 16],
+        [17, 18]]])
+>>> b = a.flatten()
+>>> b
+array([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16, 17,
+       18])
+ 
+
+
+3-D array--->2-D array
+-----------------------------------------------
+flat variable:
+--------------
+It is a 1-D iterator over the array.
+This is a 'numpy.flatiter' instance
+
+
+
+flatten()--->to convert any dimensional array to 1-D array.
+
+1. reshape()
+2. resize()
+3. flatten()
+4. flat variable
+5. ravel() function
+-------------------
+It is exactly same as flatten function except that it returns view but not copy.
+
+
+1. To convert any n-D array to 1-D array.
+2. It is method present in ndarray class and also numpy library function.
+   a.ravel()--->valid
+   np.ravel()-->valid
+3.  a.ravel(order='C') 
+   C-style====>row major order
+   F-stype===>column major order
+
+4. It returns view but not copy
+5. The output of ravel() method is always 1D array
+
+
+>>> a = np.arange(24).reshape(2,3,4)
+>>> a
+array([[[ 0,  1,  2,  3],
+        [ 4,  5,  6,  7],
+        [ 8,  9, 10, 11]],
+
+       [[12, 13, 14, 15],
+        [16, 17, 18, 19],
+        [20, 21, 22, 23]]])
+>>> b = a.ravel()
+>>> b
+array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16,
+       17, 18, 19, 20, 21, 22, 23])
+>>> b[0]=7777
+>>> b
+array([7777,    1,    2,    3,    4,    5,    6,    7,    8,    9,   10,
+         11,   12,   13,   14,   15,   16,   17,   18,   19,   20,   21,
+         22,   23])
+>>> a
+array([[[7777,    1,    2,    3],
+        [   4,    5,    6,    7],
+        [   8,    9,   10,   11]],
+
+       [[  12,   13,   14,   15],
+        [  16,   17,   18,   19],
+        [  20,   21,   22,   23]]])
+
+
+>>> a = np.arange(18).reshape(6,3)
+>>> a
+array([[ 0,  1,  2],
+       [ 3,  4,  5],
+       [ 6,  7,  8],
+       [ 9, 10, 11],
+       [12, 13, 14],
+       [15, 16, 17]])
+>>> b = np.ravel(a)
+>>> b
+array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16,
+       17])
+
+
+Q. What is the difference between flatten() and ravel():
+-------------------------------------------------------
+
+
+
+6. transpose()
+7. swapaxes()
+
+
+6. transpose():
+---------------
+to find transpose() of given ndarray.
+
+np.transpose(a, axes=None)
+    Reverse or permute the axes of an array; returns the modified array.
+
+
+
+>>> a = np.arange(1,5).reshape(2,2)
+>>> a
+array([[1, 2],
+       [3, 4]])
+>>> np.transpose(a)
+array([[1, 3],
+       [2, 4]])
+       
+***Note: No change in data and hence it returns only view but not copy.
+
+for 3-D array:
+-------------
+(2,3,4):
+   2 --->2-D arrays
+   3---->3 rows in every 2-D array
+   4---->4 rows in every 2-D array
+   24--->Total size
+
+If we transpose this array:
+np.transpose(a)
+(4,3,2)
+   4--->2-D arrays
+   3--->3 rows in every 2-D array
+   2--->2 columns in every 2-D array
+   Total size: 24
+
+transpose of 1-D array:
+-----------------------
+transpose of 1-D array will generate same array only.
+
+>>> a = np.arange(6)
+>>> a
+array([0, 1, 2, 3, 4, 5])
+>>> np.transpose(a)
+array([0, 1, 2, 3, 4, 5])
+
+4-D array:
+---------
+a --->(2,3,4,5)
+np.transpose(a) ---->(5,4,3,2)
+
+
+axes parameter:
+---------------
+If we are not using axes parameter, then dimensions will be reversed.
+axes parameter descirbes in which order we have to take axes.
+It is very helpful for 3-D and 4-D arrays.
+
+for 3-D array:(2,3,4)
+
+The size of axis-0: 2
+The size of axis-1: 3
+The size of axis-2: 4
+
+
+np.transpose(a) --->(4,3,2)
+
+My required order is: (2,4,3)
+np.transpose(a,axes=(0,2,1))
+
+My required shape is: (3,2,4)
+np.transpose(a,axes=(1,0,2))
+---------------------------------
+For 2-D array:
+--------------
+a = np.array([[10,20,30],[40,50,60]])
+a.shape--->(2,3)
+
+axis-0---->number of rows
+axis-1---->number of columns
+
+
+
+np.transpose(a,axes=(0,1))
+np.transpose(a,axes=(1,0))
+
+Note: If we repeat same axis multiple times then we will get error.
+for 3-D array:(2,3,4)
+np.transpose(a,axes=(0,2,2))
+ValueError: repeated axis in transpose
+----------------------------------
+1. For 1-D array, there is no effect of transpose() function.
+2. If we are not using axes argument, then dimensions will be reversed.
+3. If we provide axes argument, then we can specify our own order of axes.
+4. Repeated axis in transpose is not allowed.
+5. axes argument is more helpful from  3-D array onwards but not for 2-D array.
+
+ndarray class transpose() method:
+---------------------------------
+The behaviour is exactly same as numpy library transpose() function.
+
+a.transpose(*axes)
+
+    Returns a view of the array with axes transposed.
+
+eg-1:
+a = np.arange(24).reshape(2,3,4)
+b = a.transpose()
+
+>>> b = a.transpose((2,0,1))
+>>> b.shape
+(4, 2, 3)
+
+a.T also
+
+
+
+
+
+
+
+
+
+
+
+Note: 
+1. For 1-D array, there is no effect of transpose() function.
+2. If we are not using axes argument, then dimensions will be reversed.
+3. If we provide axes argument, then we can specify our own order of axes.
+4. Repeated axis in transpose is not allowed.
+5. axes argument is more helpful from  3-D array onwards but not for 2-D arrays.
+6. Various possible syntaxes:
+	1. numpy.transpose(a)
+	2. numpy.transpose(a,axes=(2,0,1))
+	3. ndarrayobject.transpose()
+	4. ndarrayobject.transpose(*axes)
+	5. ndarrayobject.T
+   Here 1,3,5 lines are equal wrt functionality.
+
+
+swapaxes()
+----------
+
+input: (2,3,4)
+output: (4,3,2),(3,2,4),(2,4,3),(3,4,2) etc
+
+By transpose() function, we can interchange any number of dimensions.
+But if we want to interchange only two dimensions then we should go for swapaxes() function.
+
+swapaxes(a, axis1, axis2)
+    Interchange two axes of an array.
+
+a: (2,3,4)
+np.swapaxes(a,0,2)-->(4,3,2)
+np.swapaxes(a,1,2)-->(2,4,3)
+
+-----------------------------
+>>> a = np.arange(6).reshape(3,2)
+>>> a
+array([[0, 1],
+       [2, 3],
+       [4, 5]])
+>>> np.swapaxes(a,0,1)
+array([[0, 2, 4],
+       [1, 3, 5]])
+>>> np.swapaxes(a,1,0)
+array([[0, 2, 4],
+       [1, 3, 5]])
+
+
+ndarray class also contains swapaxes
+-------------------------------------
+>>> a
+array([[0, 1],
+       [2, 3],
+       [4, 5]])
+>>> b = a.swapaxes(0,1)
+>>> b
+array([[0, 2, 4],
+       [1, 3, 5]])
+>>> help(np.ndarray.swapaxes)
+Help on method_descriptor:
+
+swapaxes(...)
+    a.swapaxes(axis1, axis2)
+
+    Return a view of the array with `axis1` and `axis2` interchanged.
+
+    Refer to `numpy.swapaxes` for full documentation.
+
+Difference between transpose() and swapaxes():
+-----------------------------------------------
+By using transpose() we can interchange any number of dimensions.
+But by using swapaxes() we can interchange only two dimensions.
+
+
+
+1. reshape()
+2. resize()
+3. flatten()
+4. flat variable
+5. ravel()
+6. transpose()
+7. swapaxes()
+
+Joining of multiple ndarrays into a single array:
+-------------------------------------------------
+It is something like join queries in Oracle.
+
+1. concatenate()
+2. stack()
+3. vstack()
+4. hstack()
+5. dstack()
+
+1. joining of multiple ndarrays into a sigle array by using concatenate() function
+----------------------------------------------------------------------------------
+Syntax:
+-------
+concatenate(...)
+    concatenate((a1, a2, ...), axis=0, out=None, dtype=None, casting="same_kind")
+
+    Join a sequence of arrays along an existing axis.
+
+
+2-D array +2-D array  
+axis=None
+These 2-D arrays will be flatten to 1-D array and then concatenation will be happend.
+
+
+Rules:
+------
+1. We can join any number of arrays, but all arrays should be of same dimension.
+2. The sizes of all axes, except concatenation axes must be matched.
+3. The result of concatenation and out must have same shape.
+
+eg-1: Concatenation of two 1-D arrays:
+--------------------------------------
+a = np.arange(4)
+b = np.arange(5)
+
+>>> np.concatenate((a,b))
+array([0, 1, 2, 3, 0, 1, 2, 3, 4])
+
+eg-2: concatenation of three 1-D arrays:
+----------------------------------------
+>>> np.concatenate((a,b,c))
+array([0, 1, 2, 3, 0, 1, 2, 3, 4, 0, 1, 2])
+
+
+Storing result by using out parameter:
+-------------------------------------
+>>> np.concatenate((a,b,c),out=d)
+array([0, 1, 2, 3, 0, 1, 2, 3, 4, 0, 1, 2])
+>>> d = np.empty(10,dtype=int)
+>>> np.concatenate((a,b,c),out=d)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<__array_function__ internals>", line 5, in concatenate
+ValueError: Output array is the wrong shape
+
+
+Using dtype parameter:
+----------------------
+We can specify the required type by using dtype parameter.
+
+>>> a
+array([0, 1, 2, 3])
+>>> b
+array([0, 1, 2, 3, 4])
+>>> np.concatenate((a,b),dtype='float')
+array([0., 1., 2., 3., 0., 1., 2., 3., 4.])
+>>> np.concatenate((a,b),dtype='str')
+array(['0', '1', '2', '3', '0', '1', '2', '3', '4'], dtype='<U11')
+
+***Note: We cannot use dtype and out simultaneously, because out array has its own dtype.
+
+>>> a = np.arange(4)
+>>> b = np.arange(5)
+>>> c = np.empty(9)
+>>> np.concatenate((a,b),out=c,dtype='int')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<__array_function__ internals>", line 5, in concatenate
+TypeError: concatenate() only takes `out` or `dtype` as an argument, but both were provided.
+
+Q. Is it possible to join 1-D array and 2-D array?
+Not possible. To use concatenate() function, compulsory all input arrays must have same dimension.
+
+>>> a = np.arange(5)
+>>> b = np.arange(12).reshape(3,4)
+>>> np.concatenate(a,b)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<__array_function__ internals>", line 5, in concatenate
+TypeError: only integer scalar arrays can be converted to a scalar index
+
+Joining of 2-D arrays:
+----------------------
+For 2-D array the existing axes are:
+
+axis-0 --->Represents the number of rows
+axis-1 --->Represents the number of columns
+
+We can perform concatenation based on either axis-0 or axis-1.
+The size of all dimensions(axes) must be matched except concatenation axis.
+If we are not specifying axis the default value is 0. If axis is None, then arrays will be flatten to 1-D array and then concatenation will be happend.
+
+eg-1:
+a = np.array([[10,20],[30,40],[50,60]])
+b = np.array([[70,80],[90,100]])
+
+>>> a
+array([[10, 20],
+       [30, 40],
+       [50, 60]])
+>>> b
+array([[ 70,  80],
+       [ 90, 100]])
+
+
+-------------------
+eg-2:
+a = np.arange(6).reshape(3,2)
+b = np.arange(9).reshape(3,3)
+
+>>> a = np.arange(6).reshape(3,2)
+>>> b = np.arange(9).reshape(3,3)
+>>> a
+array([[0, 1],
+       [2, 3],
+       [4, 5]])
+>>> b
+array([[0, 1, 2],
+       [3, 4, 5],
+       [6, 7, 8]])
+>>> np.concatenate((a,b),axis=0)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<__array_function__ internals>", line 5, in concatenate
+ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 1, the array at index 0 has size 2 and the array at index 1 has size 3
+>>> a
+array([[0, 1],
+       [2, 3],
+       [4, 5]])
+>>> b
+array([[0, 1, 2],
+       [3, 4, 5],
+       [6, 7, 8]])
+>>> np.concatenate((a,b),axis=1)
+array([[0, 1, 0, 1, 2],
+       [2, 3, 3, 4, 5],
+       [4, 5, 6, 7, 8]])
+
+a = np.arange(4).reshape(2,2)
+b = np.arange(4).reshape(2,2)
+
+>>> a = np.arange(4).reshape(2,2)
+>>> b = np.arange(4).reshape(2,2)
+>>> a
+array([[0, 1],
+       [2, 3]])
+>>> b
+array([[0, 1],
+       [2, 3]])
+>>> np.concatenate((a,b),axis=0)
+array([[0, 1],
+       [2, 3],
+       [0, 1],
+       [2, 3]])
+>>> np.concatenate((a,b),axis=1)
+array([[0, 1, 0, 1],
+       [2, 3, 2, 3]])
+>>> np.concatenate((a,b),axis=None)
+array([0, 1, 2, 3, 0, 1, 2, 3])
+
+Concatenation of 3-D arrays:
+----------------------------
+(x,y,z)
+axis-0 --->The number of 2-D arrays
+axis-1 --->The number of rows in every 2-D array
+axis-2 --->The number of columns in every 2-D array
+
+eg-1:
+>>> a = np.arange(8).reshape(2,2,2)
+>>> b = np.arange(8).reshape(2,2,2)
+>>> a
+array([[[0, 1],
+        [2, 3]],
+
+       [[4, 5],
+        [6, 7]]])
+>>> b
+array([[[0, 1],
+        [2, 3]],
+
+       [[4, 5],
+        [6, 7]]])
+>>> np.concatenate((a,b),axis=0)
+array([[[0, 1],
+        [2, 3]],
+
+       [[4, 5],
+        [6, 7]],
+
+       [[0, 1],
+        [2, 3]],
+
+       [[4, 5],
+        [6, 7]]])
+>>> a
+array([[[0, 1],
+        [2, 3]],
+
+       [[4, 5],
+        [6, 7]]])
+>>> b
+array([[[0, 1],
+        [2, 3]],
+
+       [[4, 5],
+        [6, 7]]])
+>>> np.concatenate((a,b),axis=1)
+array([[[0, 1],
+        [2, 3],
+        [0, 1],
+        [2, 3]],
+
+       [[4, 5],
+        [6, 7],
+        [4, 5],
+        [6, 7]]])
+>>> np.concatenate((a,b),axis=2)
+array([[[0, 1, 0, 1],
+        [2, 3, 2, 3]],
+
+       [[4, 5, 4, 5],
+        [6, 7, 6, 7]]])
+>>> np.concatenate((a,b),axis=None)
+array([0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7])
+
+
+a=(2,3,2)
+b=(2,3,3)
+
+axis-0--->no
+axis-1--->no
+axis-2---->yes
+
+
+
+>>> a = np.arange(12).reshape(2,3,2)
+>>> a
+array([[[ 0,  1],
+        [ 2,  3],
+        [ 4,  5]],
+
+       [[ 6,  7],
+        [ 8,  9],
+        [10, 11]]])
+>>> b = np.arange(18).reshape(2,3,3)
+>>> b
+array([[[ 0,  1,  2],
+        [ 3,  4,  5],
+        [ 6,  7,  8]],
+
+       [[ 9, 10, 11],
+        [12, 13, 14],
+        [15, 16, 17]]])
+>>> np.concatenate((a,b),axis=0)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<__array_function__ internals>", line 5, in concatenate
+ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 2, the array at index 0 has size 2 and the array at index 1 has size 3
+>>> np.concatenate((a,b),axis=1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<__array_function__ internals>", line 5, in concatenate
+ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 2, the array at index 0 has size 2 and the array at index 1 has size 3
+>>> np.concatenate((a,b),axis=2)
+array([[[ 0,  1,  0,  1,  2],
+        [ 2,  3,  3,  4,  5],
+        [ 4,  5,  6,  7,  8]],
+
+       [[ 6,  7,  9, 10, 11],
+        [ 8,  9, 12, 13, 14],
+        [10, 11, 15, 16, 17]]])
+>>> np.concatenate((a,b),axis=None)
+array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11,  0,  1,  2,  3,  4,
+        5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16, 17])
+
+Q. a:(2,3,3) and b:(1,3,3)
+axis-0 only possible
+
+Q. (3,2,3) and (2,1,3)
+  Not possible to perform concatenation on any axis.
+  But axis=None is possible
+
+
+
+
+1-D + 1-D --->1-D
+2-D + 2-D --->2-D
+concatenation is always based on existing axis.
+All input arrays must have same dimension.
+Except concatenation axis, remaining must have same size.
+
+
+
+joining of multiple nd arrays by using stack() function:
+--------------------------------------------------------
+
+1-D + 1-D----->2-D
+2-D + 2-D---->3-D
+
+Rules:
+1. The input arrays must have same shape.
+2. The resultant stacked array has one more dimension than the input arrays.
+3. Joining will be happend along new axis of newly created array.
+
+For stacking of 1-D arrays:
+---------------------------
+eg-1:
+a = np.array([10,20,30])
+b = np.array([40,50,60,70])
+Error
+
+
+
+>>> a = np.array([10,20,30])
+>>> b = np.array([40,50,60])
+>>> a
+array([10, 20, 30])
+>>> b
+array([40, 50, 60])
+>>> np.stack((a,b))
+array([[10, 20, 30],
+       [40, 50, 60]])
+>>> np.stack((a,b))
+array([[10, 20, 30],
+       [40, 50, 60]])
+>>> np.stack((a,b),axis=1)
+array([[10, 40],
+       [20, 50],
+       [30, 60]])
+
+eg: Stacking of 2-D arrays:
+---------------------------
+The resultant array will be: 3-D array
+3-D array shape:(x,y,z)
+x-->axis-0 ---->The number of 2-D arrays
+y-->axis-1 ---->The number of rows in every 2-D array
+z-->axis-2 ---->The number of columns in every 2-D array
+
+a = np.array([[1,2,3],[4,5,6]])
+b = np.array([[7,8,9],[10,11,12]])
+
+
+np.stack((a,b),axis=0)
+np.stack((a,b))
+
+
+np.stack((a,b),axis=1)
+
+
+>>> np.stack((a,b),axis=1)
+array([[[ 1,  2,  3],
+        [ 7,  8,  9]],
+
+       [[ 4,  5,  6],
+        [10, 11, 12]]])
+
+z-->axis-2 ---->The number of columns in every 2-D array
+np.stack((a,b),axis=2)
+
+
+
+a = np.arange(1,7).reshape(3,2)
+b = np.arange(7,13).reshape(3,2)
+c = np.arange(13,19).reshape(3,2)
+
+
+>>> a
+array([[1, 2],
+       [3, 4],
+       [5, 6]])
+>>> b
+array([[ 7,  8],
+       [ 9, 10],
+       [11, 12]])
+>>> c
+array([[13, 14],
+       [15, 16],
+       [17, 18]])
+  
+Based on axis-0:
+----------------
+In 3-D array axis-0 means the number of 2-d arrays
+
+np.stack((a,b,c),axis=0)
+np.stack((a,b,c))
+
+>>> np.stack((a,b,c),axis=0)
+array([[[ 1,  2],
+        [ 3,  4],
+        [ 5,  6]],
+
+       [[ 7,  8],
+        [ 9, 10],
+        [11, 12]],
+
+       [[13, 14],
+        [15, 16],
+        [17, 18]]])
+
+Based on axis-1:
+----------------
+In 3-D array, axis-1 means the number of rows.
+Stacking row wise
+
+np.stack((a,b,c),axis=1)
+
+>>> np.stack((a,b,c),axis=1)
+array([[[ 1,  2],
+        [ 7,  8],
+        [13, 14]],
+
+       [[ 3,  4],
+        [ 9, 10],
+        [15, 16]],
+
+       [[ 5,  6],
+        [11, 12],
+        [17, 18]]])
+
+Based on axis-2:
+----------------
+in 3-D array axis-2 means the number of columns in every 2-D array.
+stacking column wise
+
+np.stack((a,b,c),axis=2)
+
+>>> np.stack((a,b,c),axis=2)
+array([[[ 1,  7, 13],
+        [ 2,  8, 14]],
+
+       [[ 3,  9, 15],
+        [ 4, 10, 16]],
+
+       [[ 5, 11, 17],
+        [ 6, 12, 18]]])
+
+
+Stacking of three 1-D arrays:
+-----------------------------
+a = np.arange(4)
+b = np.arange(4,8)
+c = np.arange(8,12)
+
+We will get 2-D array
+In 2-D array avaialble axes are: axis-0 and axis-1
+
+>>> a
+array([0, 1, 2, 3])
+>>> b
+array([4, 5, 6, 7])
+>>> c
+array([ 8,  9, 10, 11])
+
+Based on axis-0:
+----------------
+axis-0 in 2-D array means the number of rows
+np.stack((a,b,c),axis=0)
+
+>>> np.stack((a,b,c),axis=0)
+array([[ 0,  1,  2,  3],
+       [ 4,  5,  6,  7],
+       [ 8,  9, 10, 11]])
+Based on axis-1:
+---------------
+axis-1 in 2-D array means the number of columns
+np.stack((a,b,c),axis=1)
+
+>>> np.stack((a,b,c),axis=1)
+array([[ 0,  4,  8],
+       [ 1,  5,  9],
+       [ 2,  6, 10],
+       [ 3,  7, 11]])
+
+Q. What is the difference between concateante() and stack() functions?
+Table: concatenate()    |  stack()
+1. Joining will be happened based on existing axis.
+1. Joining will be happened based on new axis.
+
+2. The dimension of newly created array is same as input array dimension.
+2. The dimension of newly created array is one more than input array dimension.
+
+3. To perform concatenation, all input arrays must have same dimension. The size of all dimensions except concatenation axis must be same.
+3. To perform stack operation, compulsory all input arrays must have same shape.ie dimensions,sizes also needs to be same.
+
+Joining of arrays by using vstack() function:
+---------------------------------------------
+vstack--->vertical stack--->joining is always based on axis-0
+For 1-D arrays--->2-D array as output.
+For the remaining dimensions it acts as concatenate() along axis-0
+The result of vstack() function should be atleast 2-D
+For 1-D arrays, the sizes must be same.
+This is equivalent to concatenation along the first axis(axis-0) after 1-D arrays
+    of shape `(N,)` have been reshaped to `(1,N)`.
+
+eg-1: 
+a = np.array([10,20,30,40])
+b = np.array([50,60,70,80])
+np.vstack((a,b))
+
+
+eg-2: 
+a = np.arange(1,10).reshape(3,3)
+b = np.arange(10,16).reshape(2,3)
+np.vstack((a,b))
+
+eg-3:
+a = np.arange(1,10).reshape(3,3)
+b = np.arange(10,16).reshape(3,2) 
+np.vstack((a,b))
+
+ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 1, the array at index 0 has size 3 and the array at index 1 has size 2
+
+eg-4: For 3-D arrays:
+---------------------
+axis-0 means The number of 2-D arrays
+
+a = np.arange(1,25).reshape(2,3,4)
+b = np.arange(25,49).reshape(2,3,4)
+
+>>> np.vstack((a,b))
+array([[[ 1,  2,  3,  4],
+        [ 5,  6,  7,  8],
+        [ 9, 10, 11, 12]],
+
+       [[13, 14, 15, 16],
+        [17, 18, 19, 20],
+        [21, 22, 23, 24]],
+
+       [[25, 26, 27, 28],
+        [29, 30, 31, 32],
+        [33, 34, 35, 36]],
+
+       [[37, 38, 39, 40],
+        [41, 42, 43, 44],
+        [45, 46, 47, 48]]])
+
+Joining of arrays by using hstack() function:
+---------------------------------------------
+Exactly same as concatenate() but joining is always based on axis-1
+
+hstack--->horizontal stack--->column wise
+1-D + 1-D --->1-D
+For 1-D array:
+--------------
+a = np.array([10,20,30,40])
+b = np.array([50,60,70,80,90,100])
+np.hstack((a,b))
+
+array([ 10,  20,  30,  40,  50,  60,  70,  80,  90, 100])
+
+eg-2: For 2-D arrays:
+----------------------
+a = np.arange(1,7).reshape(3,2)
+b = np.arange(7,16).reshape(3,3)
+
+
+>>> a = np.arange(1,7).reshape(3,2)
+>>> b = np.arange(7,16).reshape(3,3)
+>>> a
+array([[1, 2],
+       [3, 4],
+       [5, 6]])
+>>> b
+array([[ 7,  8,  9],
+       [10, 11, 12],
+       [13, 14, 15]])
+>>> np.hstack((a,b))
+array([[ 1,  2,  7,  8,  9],
+       [ 3,  4, 10, 11, 12],
+       [ 5,  6, 13, 14, 15]])
+
+eg-2:
+a = np.arange(1,7).reshape(2,3)
+b = np.arange(7,16).reshape(3,3)
+
+
+Joining of arrays by using dstack() function:
+---------------------------------------------
+dstack means --->depth stack/height stack    based on axis-2
+1-D and 2-D arrays will be converted to 3-D array
+The result is minimum 3-D array
+
+Stack arrays in sequence depth wise (along third axis).
+This is equivalent to concatenation along the third axis after 2-D arrays
+    of shape `(M,N)` have been reshaped to `(M,N,1)` and 1-D arrays of shape
+    `(N,)` have been reshaped to `(1,N,1)`.
+
+>>> a = np.array((1,2,3))
+    >>> b = np.array((2,3,4))
+    >>> np.dstack((a,b))
+    array([[[1, 2],
+            [2, 3],
+            [3, 4]]])
+
+    >>> a = np.array([[1],[2],[3]])
+    >>> b = np.array([[2],[3],[4]])
+    >>> np.dstack((a,b))
+    array([[[1, 2]],
+           [[2, 3]],
+           [[3, 4]]])
+
+Table: Summary of joining of nd arrays:
+---------------------------------------
+1. concatenate() ---> Join a sequence of arrays along an existing axis.
+2. stack()--->Join a sequence of arrays along a new axis.
+3. vstack() --->Stack arrays in sequence vertically according to first axis (axis-0).
+4. hstack()--->Stack arrays in sequence horizontally according to second axis(axis-1).
+5. dstack()---> Stack arrays in sequence depth wise according to third axis(axis-2).
+
+Splitting of ndarrays:
+----------------------
+We can perform split operation by using the following functions
+
+1. split()
+2. vsplit()
+3. hsplit()
+4. dsplit()
+5. array_split()
+
+We will get views but not copies.
+
+1. split():
+-----------
+array, sections_or_indices, axis
+
+split(ary, indices_or_sections, axis=0)
+    Split an array into multiple sub-arrays as views into `ary`
+
+sections:
+   1. Array will be splitted into sub arrays of equal size.
+   2. It returns list of sub arrays
+
+eg-1: To split 1-D array into 3 parts
+
+a= np.arange(1,10)
+
+sub_arrays = np.split(a,3)
+
+>>> sub_arrays = np.split(a,3)
+>>> sub_arrays[0]
+array([1, 2, 3])
+>>> sub_arrays[1]
+array([4, 5, 6])
+>>> sub_arrays[2]
+array([7, 8, 9])
+
+
+sub_arrays = np.split(a,4)
+
+>>> sub_arrays = np.split(a,4)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<__array_function__ internals>", line 5, in split
+  File "C:\Python38\lib\site-packages\numpy\lib\shape_base.py", line 872, in split
+    raise ValueError(
+ValueError: array split does not result in an equal division
+
+
+
+eg-2: splitting of 2-D array:
+-----------------------------
+splitting is based on axis-0 bydefault. ie row wise split(vertical split)
+
+We can also split based on axis-1. column wise split (horizontal split)
+
+a = np.arange(1,25).reshape(6,4)
+
+
+
+>>> a = np.arange(1,25).reshape(6,4)
+>>> a
+array([[ 1,  2,  3,  4],
+       [ 5,  6,  7,  8],
+       [ 9, 10, 11, 12],
+       [13, 14, 15, 16],
+       [17, 18, 19, 20],
+       [21, 22, 23, 24]])
+>>> np.split(a,2)
+[array([[ 1,  2,  3,  4],
+       [ 5,  6,  7,  8],
+       [ 9, 10, 11, 12]]), array([[13, 14, 15, 16],
+       [17, 18, 19, 20],
+       [21, 22, 23, 24]])]
+>>> np.split(a,3,axis=0)
+[array([[1, 2, 3, 4],
+       [5, 6, 7, 8]]), array([[ 9, 10, 11, 12],
+       [13, 14, 15, 16]]), array([[17, 18, 19, 20],
+       [21, 22, 23, 24]])]
+>>> np.split(a,6)
+[array([[1, 2, 3, 4]]), array([[5, 6, 7, 8]]), array([[ 9, 10, 11, 12]]), array([[13, 14, 15, 16]]), array([[17, 18, 19, 20]]), array([[21, 22, 23, 24]])]
+
+
+>>> np.split(a,4)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<__array_function__ internals>", line 5, in split
+  File "C:\Python38\lib\site-packages\numpy\lib\shape_base.py", line 872, in split
+    raise ValueError(
+ValueError: array split does not result in an equal division
+
+splitting based on axis-1:
+--------------------------
+axis-1 means column wise splitting (horizontal split)
+
+>>> a
+array([[ 1,  2,  3,  4],
+       [ 5,  6,  7,  8],
+       [ 9, 10, 11, 12],
+       [13, 14, 15, 16],
+       [17, 18, 19, 20],
+       [21, 22, 23, 24]])
+>>> np.split(a,2,axis=1)
+[array([[ 1,  2],
+       [ 5,  6],
+       [ 9, 10],
+       [13, 14],
+       [17, 18],
+       [21, 22]]), array([[ 3,  4],
+       [ 7,  8],
+       [11, 12],
+       [15, 16],
+       [19, 20],
+       [23, 24]])]
+>>> np.split(a,4,axis=1)
+[array([[ 1],
+       [ 5],
+       [ 9],
+       [13],
+       [17],
+       [21]]), array([[ 2],
+       [ 6],
+       [10],
+       [14],
+       [18],
+       [22]]), array([[ 3],
+       [ 7],
+       [11],
+       [15],
+       [19],
+       [23]]), array([[ 4],
+       [ 8],
+       [12],
+       [16],
+       [20],
+       [24]])]
+>>> np.split(a,3,axis=1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<__array_function__ internals>", line 5, in split
+  File "C:\Python38\lib\site-packages\numpy\lib\shape_base.py", line 872, in split
+    raise ValueError(
+ValueError: array split does not result in an equal division
+
+Split based on indices:
+-----------------------
+The sizes of sub arrays need not be equal.
+
+a = np.arange(10,101,10)
+
+
+Split 2-D array based on indices:
+----------------------------------
+a = np.arange(1,13).reshape(6,2)
+
+
+a = np.arange(1,19).reshape(3,6)
+
+np.split(a,[1,3,5],axis=1)
+np.split(a,[2,4,4],axis=1)
+np.split(a,[0,2,6],axis=1)
+np.split(a,[1,5,3],axis=1)
+
+Splitting by vsplit():
+---------------------
+vsplit means vertical split means row wise split
+split is based on axis-0
+
+vsplit(array, sections_or_indices)
+
+To use vsplit, input array should be atleast 2-D array
+
+a = np.arange(10)
+
+
+>>> a = np.arange(10)
+>>> a
+array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+>>> np.vsplit(a,2)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<__array_function__ internals>", line 5, in vsplit
+  File "C:\Python38\lib\site-packages\numpy\lib\shape_base.py", line 990, in vsplit
+    raise ValueError('vsplit only works on arrays of 2 or more dimensions')
+ValueError: vsplit only works on arrays of 2 or more dimensions
+
+For 2-D arrays:
+---------------
+>>> a = np.arange(1,13).reshape(6,2)
+>>> a
+array([[ 1,  2],
+       [ 3,  4],
+       [ 5,  6],
+       [ 7,  8],
+       [ 9, 10],
+       [11, 12]])
+>>> np.vsplit(a,2)
+[array([[1, 2],
+       [3, 4],
+       [5, 6]]), array([[ 7,  8],
+       [ 9, 10],
+       [11, 12]])]
+>>> np.vsplit(a,3)
+[array([[1, 2],
+       [3, 4]]), array([[5, 6],
+       [7, 8]]), array([[ 9, 10],
+       [11, 12]])]
+>>> np.vsplit(a,6)
+[array([[1, 2]]), array([[3, 4]]), array([[5, 6]]), array([[7, 8]]), array([[ 9, 10]]), array([[11, 12]])]
+>>> np.vsplit(a,[1,4])
+[array([[1, 2]]), array([[3, 4],
+       [5, 6],
+       [7, 8]]), array([[ 9, 10],
+       [11, 12]])]
+
+splitting by hsplit():
+-----------------------
+split horizontally (column wise)
+
+>>> a = np.arange(10)
+>>> a
+array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+>>> np.hsplit(a,2)
+[array([0, 1, 2, 3, 4]), array([5, 6, 7, 8, 9])]
+>>> np.hsplit(a,10)
+[array([0]), array([1]), array([2]), array([3]), array([4]), array([5]), array([6]), array([7]), array([8]), array([9])]
+>>> np.hsplit(a,3)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<__array_function__ internals>", line 5, in hsplit
+  File "C:\Python38\lib\site-packages\numpy\lib\shape_base.py", line 942, in hsplit
+    return split(ary, indices_or_sections, 0)
+  File "<__array_function__ internals>", line 5, in split
+  File "C:\Python38\lib\site-packages\numpy\lib\shape_base.py", line 872, in split
+    raise ValueError(
+ValueError: array split does not result in an equal division
+
+
+For 2-D arrays:
+---------------
+Based on axis-1 only
+
+a = np.arange(1,13).reshape(3,4)
+>>> a = np.arange(1,13).reshape(3,4)
+>>> a
+array([[ 1,  2,  3,  4],
+       [ 5,  6,  7,  8],
+       [ 9, 10, 11, 12]])
+>>> np.hsplit(a,2)
+[array([[ 1,  2],
+       [ 5,  6],
+       [ 9, 10]]), array([[ 3,  4],
+       [ 7,  8],
+       [11, 12]])]
+>>> np.hsplit(a,4)
+[array([[1],
+       [5],
+       [9]]), array([[ 2],
+       [ 6],
+       [10]]), array([[ 3],
+       [ 7],
+       [11]]), array([[ 4],
+       [ 8],
+       [12]])]
+>>> np.hsplit(a,3)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<__array_function__ internals>", line 5, in hsplit
+  File "C:\Python38\lib\site-packages\numpy\lib\shape_base.py", line 940, in hsplit
+    return split(ary, indices_or_sections, 1)
+  File "<__array_function__ internals>", line 5, in split
+  File "C:\Python38\lib\site-packages\numpy\lib\shape_base.py", line 872, in split
+    raise ValueError(
+ValueError: array split does not result in an equal division
+
+
+hsplit based on indices:
+------------------------
+a = np.arange(10,101,10)
+
+
+>>> a = np.arange(24).reshape(4,6)
+>>> a
+array([[ 0,  1,  2,  3,  4,  5],
+       [ 6,  7,  8,  9, 10, 11],
+       [12, 13, 14, 15, 16, 17],
+       [18, 19, 20, 21, 22, 23]])
+>>> np.hsplit(a,[2,4])
+[array([[ 0,  1],
+       [ 6,  7],
+       [12, 13],
+       [18, 19]]), array([[ 2,  3],
+       [ 8,  9],
+       [14, 15],
+       [20, 21]]), array([[ 4,  5],
+       [10, 11],
+       [16, 17],
+       [22, 23]])]
+>>> np.hsplit(a,[1,4])
+[array([[ 0],
+       [ 6],
+       [12],
+       [18]]), array([[ 1,  2,  3],
+       [ 7,  8,  9],
+       [13, 14, 15],
+       [19, 20, 21]]), array([[ 4,  5],
+       [10, 11],
+       [16, 17],
+       [22, 23]])]
+
+vsplit()---->split based on axis-0(rows)
+hsplit()---->split based on axis-1(columns)
+dsplit()---->split based on axis-2()--->3-D array
+
+In 3-D array: 
+   axis-0--->number of 2-D arrays
+   axis-1--->number of rows
+   axis-2-->number of columns
+
+>>> a = np.arange(24).reshape(2,3,4)
+>>> a
+array([[[ 0,  1,  2,  3],
+        [ 4,  5,  6,  7],
+        [ 8,  9, 10, 11]],
+
+       [[12, 13, 14, 15],
+        [16, 17, 18, 19],
+        [20, 21, 22, 23]]])
+>>> np.dsplit(a,2)
+[array([[[ 0,  1],
+        [ 4,  5],
+        [ 8,  9]],
+
+       [[12, 13],
+        [16, 17],
+        [20, 21]]]), array([[[ 2,  3],
+        [ 6,  7],
+        [10, 11]],
+
+       [[14, 15],
+        [18, 19],
+        [22, 23]]])]
+
+
+>>> a = np.arange(24).reshape(2,3,4)
+>>> a
+array([[[ 0,  1,  2,  3],
+        [ 4,  5,  6,  7],
+        [ 8,  9, 10, 11]],
+
+       [[12, 13, 14, 15],
+        [16, 17, 18, 19],
+        [20, 21, 22, 23]]])
+>>> np.dsplit(a,2)
+[array([[[ 0,  1],
+        [ 4,  5],
+        [ 8,  9]],
+
+       [[12, 13],
+        [16, 17],
+        [20, 21]]]), array([[[ 2,  3],
+        [ 6,  7],
+        [10, 11]],
+
+       [[14, 15],
+        [18, 19],
+        [22, 23]]])]
+>>> a
+array([[[ 0,  1,  2,  3],
+        [ 4,  5,  6,  7],
+        [ 8,  9, 10, 11]],
+
+       [[12, 13, 14, 15],
+        [16, 17, 18, 19],
+        [20, 21, 22, 23]]])
+>>> #[1,3]
+>>> np.dsplit(a,[1,3])
+[array([[[ 0],
+        [ 4],
+        [ 8]],
+
+       [[12],
+        [16],
+        [20]]]), array([[[ 1,  2],
+        [ 5,  6],
+        [ 9, 10]],
+
+       [[13, 14],
+        [17, 18],
+        [21, 22]]]), array([[[ 3],
+        [ 7],
+        [11]],
+
+       [[15],
+        [19],
+        [23]]])]
+
+splitting by using array_split():
+--------------------------------
+split() with sections--->should be equal parts, otherwise --->error
+
+
+array_split()--->sections need not be to have equal size.
+4 rows--->3 parts   2,1,1
+
+
+
+array_split(ary, indices_or_sections, axis=0)
+    Split an array into multiple sub-arrays.
+
+    Please refer to the ``split`` documentation.  The only difference
+    between these functions is that ``array_split`` allows
+    `indices_or_sections` to be an integer that does *not* equally
+    divide the axis. 
+    
+    For an array of length x that should be split
+    into n sections, it returns x % n sub-arrays of size x//n + 1
+    and the rest of size x//n.
+
+
+10 elements --->3 sections
+x=10
+n=3
+
+x % n sub-arrays of size x//n + 1--->1 sub-array of size: 4
+
+2 sub-arrays of size: 3
+4,3,3
+
+
+>>> a = np.arange(10,101,10)
+>>> a
+array([ 10,  20,  30,  40,  50,  60,  70,  80,  90, 100])
+>>> np.split(a,3)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<__array_function__ internals>", line 5, in split
+  File "C:\Python38\lib\site-packages\numpy\lib\shape_base.py", line 872, in split
+    raise ValueError(
+ValueError: array split does not result in an equal division
+>>> np.array_split(a,3)
+[array([10, 20, 30, 40]), array([50, 60, 70]), array([ 80,  90, 100])]
+
+
+
+eg-2: 
+11 elements    3 sections
+
+For an array of length x that should be split
+    into n sections, it returns x % n sub-arrays of size x//n + 1
+    and the rest of size x//n.
+
+x=11
+n=3
+
+x % n sub-arrays of size x//n + 1==>2 sub-arrays of size:4
+rest of size x//n.===> 1 sub-array of size: 3
+
+4,4,3
+
+
+x=12
+n=3
+(4,4,4)
+
+x=13
+n=3
+(5,4,4,)
+
+split(),vsplit(),hsplit(),dsplit(),array_split()
+
+
+eg:for 2-D array: 
+a = np.arange(24).reshape(6,4)
+np.array_split(a,4)
+
+
+For an array of length x that should be split
+    into n sections, it returns x % n sub-arrays of size x//n + 1
+    and the rest of size x//n.
+
+x=6
+n=4
+
+x % n sub-arrays of size x//n + 1-->2 sub-arrays of size:2 
+rest of size x//n.--->2 sub-arrays of size:1 
+2,2,1,1,
+
+
+>>> a = np.arange(24).reshape(6,4)
+>>> a
+array([[ 0,  1,  2,  3],
+       [ 4,  5,  6,  7],
+       [ 8,  9, 10, 11],
+       [12, 13, 14, 15],
+       [16, 17, 18, 19],
+       [20, 21, 22, 23]])
+>>> np.array_split(a,4)
+[array([[0, 1, 2, 3],
+       [4, 5, 6, 7]]), array([[ 8,  9, 10, 11],
+       [12, 13, 14, 15]]), array([[16, 17, 18, 19]]), array([[20, 21, 22, 23]])]
+
+
+Summary of split methods:
+-------------------------
+split()-->Split an array into multiple sub-arrays of equal size.
+vsplit()-->Split array into multiple sub-arrays vertically (row wise).
+hsplit()-->Split array into multiple sub-arrays horizontally (column-wise).
+dsplit()--> Split array into multiple sub-arrays along the 3rd axis (depth).
+array_split()-->Split an array into multiple sub-arrays of equal or           near-equal size.Does not raise an exception if an equal division cannot be made.
+
+joining
+splitting
+
+
+Sorting of ndarrays:
+--------------------
+np.sort(a)
+  quicksort --->merge sort, heap sort
+
+For numbers-->Ascending order
+For Strings-->alphabetical order
+
+
+eg-1: 1-D array:
+----------------
+a = np.array([70,20,60,10,50,40,30])
+
+>>> a = np.array([70,20,60,10,50,40,30])
+>>> a
+array([70, 20, 60, 10, 50, 40, 30])
+>>> np.sort(a)
+array([10, 20, 30, 40, 50, 60, 70])
+
+To sort in descending order:
+----------------------------
+1st way:
+-------
+np.sort(a)[::-1]
+
+>>> np.sort(a)[::-1]
+array([70, 60, 50, 40, 30, 20, 10])
+
+
+2nd way:
+--------
+>>> -np.sort(-a)
+array([70, 60, 50, 40, 30, 20, 10])
+
+
+eg-2: To sort string elements in alphabetical order
+a = np.array(['cat','rat','bat','vat','dog'])
+
+
+>>> a = np.array(['cat','rat','bat','vat','dog'])
+>>> a
+array(['cat', 'rat', 'bat', 'vat', 'dog'], dtype='<U3')
+>>> np.sort(a)
+array(['bat', 'cat', 'dog', 'rat', 'vat'], dtype='<U3')
+
+To sort reverse of alphabetical order:
+--------------------------------------
+1st way: np.sort(a)[::-1]
+
+2nd way: -np.sort(-a)--->invalid way
+
+eg-3: for 2-D arrays:
+---------------------
+
+a= np.array([[40,20,70],[30,20,60],[70,90,80]])
+
+axis-0 --->the number of rows
+axis-1--->the number of columns (axis= -1)
+
+
+
+sort operation --->sort()
+
+Searching elements of ndarray:
+------------------------------
+where() function
+
+where(...)
+    where(condition, [x, y])
+
+where() function won't return elements.
+It returns indices where condition is True.
+
+a = np.array([3,5,7,6,9,4,6,10,15])
+
+eg-1: Find indices where the value is 7
+
+>>> a = np.array([3,5,7,6,9,4,6,10,15])
+>>> a
+array([ 3,  5,  7,  6,  9,  4,  6, 10, 15])
+>>> np.where(a==7)
+(array([2], dtype=int64),)
+
+
+eg-2: Find indices where odd numbers present in the given 1-D array?
+np.where(a%2 != 0)
+
+>>> np.where(a%2 != 0)
+(array([0, 1, 2, 4, 8], dtype=int64),)
+
+
+to get elements directly
+>>> indices = np.where(a%2 != 0)
+>>> a[indices]
+array([ 3,  5,  7,  9, 15])
+
+condition based selection:
+>>> a[a%2!=0]
+array([ 3,  5,  7,  9, 15])
+
+
+eg-3: Find indices where element is divisible by 3?
+>>> np.where(a%3 == 0)
+(array([0, 3, 4, 6, 8], dtype=int64),)
+>>> a
+array([ 3,  5,  7,  6,  9,  4,  6, 10, 15])
+>>> b = np.where(a%3 == 0)
+>>> a[b]
+array([ 3,  6,  9,  6, 15])
+
+
+where(condition, [x, y])
+ This function can perform replace operation also.
+
+If condition satisfied that element will be replaced from x and if the condition fails that element will be replaced from y.
+
+eg: Replace every even number with 8888 and every odd number with 7777?
+b = np.where(a%2==0,8888,9999)
+
+
+
+>>> a
+array([ 3,  5,  7,  6,  9,  4,  6, 10, 15])
+>>> b = np.where(a%2==0,8888,9999)
+>>> b
+array([9999, 9999, 9999, 8888, 9999, 8888, 8888, 8888, 9999])
+
+
+eg: Every odd number present in a, replace with 9999
+
+b = np.where(a%2 != 0,9999,a)
+
+
+
+>>> a
+array([ 3,  5,  7,  6,  9,  4,  6, 10, 15])
+>>> b = np.where(a%2 != 0,9999)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<__array_function__ internals>", line 5, in where
+ValueError: either both or neither of x and y should be given
+>>> b = np.where(a%2 != 0,9999,a)
+>>> b
+array([9999, 9999, 9999,    6, 9999,    4,    6,   10, 9999])
+
+
+
+For 2-D arrays:
+--------------
+We can use where() function for any n-dimensional array.
+
+>>> a = np.arange(12).reshape(4,3)
+>>> a
+array([[ 0,  1,  2],
+       [ 3,  4,  5],
+       [ 6,  7,  8],
+       [ 9, 10, 11]])
+>>> np.where(a%5==0)
+(array([0, 1, 3], dtype=int64), array([0, 2, 1], dtype=int64))
+
+The first ndarray represents row indices and second ndarray represents column indices. ie the required elements present at (0,0),(1,2) and (3,1) index places.
+
+Even we can perform replacement operation also.
+
+>>> np.where(a%5==0,9999,a)
+array([[9999,    1,    2],
+       [   3,    4, 9999],
+       [   6,    7,    8],
+       [   9, 9999,   11]])
+ 
+
+sort()
+where()
+
+searchsorted() function:
+-----------------------
+Internally this function will use Binary Search algorithm. Hence we can call this function only for sorted arrays.
+If the array is not sorted then we will get abnormal results.
+
+searchsorted(a, v, side='left', sorter=None)
+    Find indices where elements should be inserted to maintain order.
+
+a = np.arange(0,31,5)
+>>> a
+array([ 0,  5, 10, 15, 20, 25, 30])
+np.searchsorted(a,5)
+
+
+Note: Bydefault it will always search from left hand side to identify insertion point. If we want to search from right hand side we should use side='right'
+
+>>> a = np.array([3,5,7,6,7,9,4,10,15,6])
+>>> a
+array([ 3,  5,  7,  6,  7,  9,  4, 10, 15,  6])
+>>> a = np.sort(a)
+>>> a
+array([ 3,  4,  5,  6,  6,  7,  7,  9, 10, 15])
+>>> np.searchsorted(a,6)
+3
+>>> np.searchsorted(a,6,side='right')
+5
+
+Summary:
+1. sort()--->To sort given array
+2. where() --->To perform search and replace operation
+3. searchsorted() --->To identify insertion point in the given sorted array.
+
+How to insert elements into ndarrays?
+--------------------------------------
+
+1. insert()
+2. append()
+
+1. insert():
+------------
+insert(arr, obj, values, axis=None)
+    Insert values along the given axis before the given indices.
+
+obj--->object that defines index or indices before which the value will be inserted.
+
+Inserting into 1-D array:
+-------------------------
+a = np.arange(10)
+eg-1: To insert 7777 before index 2
+
+b = np.insert(a,2,7777)
+
+
+>>> b = np.insert(a,2,7777)
+>>> b
+array([   0,    1, 7777,    2,    3,    4,    5,    6,    7,    8,    9])
+
+eg-2: To insert 7777 before index 2 and 5?
+b = np.insert(a,[2,5],7777)
+
+>>> b = np.insert(a,[2,5],7777)
+>>> b
+array([   0,    1, 7777,    2,    3,    4, 7777,    5,    6,    7,    8,
+          9])
+
+eg-3: To insert 7777 before index 2 and 8888 before index 5?
+
+
+b = np.insert(a,[2,5],[7777,8888])
+
+
+eg-4: observations
+b = np.insert(a,[2,5],[7777,8888,9999])
+
+ValueError: shape mismatch: value array of shape (3,)  could not be broadcast to indexing result of shape (2,)
+
+
+b = np.insert(a,[2,5,7],[7777,8888])
+ValueError: shape mismatch: value array of shape (2,)  could not be broadcast to indexing result of shape (3,)
+
+
+b = np.insert(a,[2,5,5],[777,888,999])
+
+>>> b = np.insert(a,[2,5,5],[777,888,999])
+>>> b
+array([  0,   1, 777,   2,   3,   4, 888, 999,   5,   6,   7,   8,   9])
+
+b = np.insert(a,25,7777)
+IndexError: index 25 is out of bounds for axis 0 with size 10
+
+
+****Note:
+Array should contain only homogeneous elements. If we are trying to insert any other type element,that element will be converted to array type automatically before insertion. If the conversion not possible then we will get error.
+
+>>> a
+array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+>>> np.insert(a,2,123.456)
+array([  0,   1, 123,   2,   3,   4,   5,   6,   7,   8,   9])
+>>> np.insert(a,2,True)
+array([0, 1, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+>>> np.insert(a,2,'durga')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<__array_function__ internals>", line 5, in insert
+  File "C:\Python38\lib\site-packages\numpy\lib\function_base.py", line 4640, in insert
+    values = array(values, copy=False, ndmin=arr.ndim, dtype=arr.dtype)
+ValueError: invalid literal for int() with base 10: 'durga'
+>>> np.insert(a,2,10+20j)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<__array_function__ internals>", line 5, in insert
+  File "C:\Python38\lib\site-packages\numpy\lib\function_base.py", line 4640, in insert
+    values = array(values, copy=False, ndmin=arr.ndim, dtype=arr.dtype)
+TypeError: can't convert complex to int
+
+Summary:
+--------
+While inserting elements into 1-D array we have to take care of the following:
+
+1. The number of indices and the number of elements should be matched.
+2. Out of range index is not allowed.
+3. Elements will be converted automatically to the array type
+
+Inserting elements into 2-D arrays:
+-----------------------------------
+we should provide axis.
+If we are not providing axis, then default value None,will be considered.Then the array will be flatten to 1-D array and then insertion will be happend.
+
+eg:
+a = np.array([[10,20],[30,40]])
+np.insert(a,1,100)
+
+>>> a = np.array([[10,20],[30,40]])
+>>> np.insert(a,1,100)
+array([ 10, 100,  20,  30,  40])
+
+eg-2: 
+np.insert(a,1,100,axis=0)
+
+>>> np.insert(a,1,100,axis=0)
+array([[ 10,  20],
+       [100, 100],
+       [ 30,  40]])
+
+eg-3:
+np.insert(a,1,[100,200],axis=0)
+
+>>> np.insert(a,1,[100,200],axis=0)
+array([[ 10,  20],
+       [100, 200],
+       [ 30,  40]])
+
+
+>>> np.insert(a,1,[100,200,300],axis=0)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<__array_function__ internals>", line 5, in insert
+  File "C:\Python38\lib\site-packages\numpy\lib\function_base.py", line 4652, in insert
+    new[tuple(slobj)] = values
+ValueError: could not broadcast input array from shape (1,3) into shape (1,2)
+
+eg:
+np.insert(a,1,100,axis=1)
+   To insert a new column
+ 
+ >>> np.insert(a,1,100,axis=1)
+array([[ 10, 100,  20],
+       [ 30, 100,  40]])
+
+
+
+>>> np.insert(a,1,[100,200],axis=1)
+array([[ 10, 100,  20],
+       [ 30, 200,  40]])
+
+
+In 2-D array axis-0 means rows (axis -2)
+In 2-D array axis-1 means columns(axis -1)
+
+np.insert(a,0,[100,200],axis=-1)
+>>> np.insert(a,0,[100,200],axis=-1)
+array([[100,  10,  20],
+       [200,  30,  40]])
+
+
+>>> np.insert(a,1,[100,200,300],axis=0)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<__array_function__ internals>", line 5, in insert
+  File "C:\Python38\lib\site-packages\numpy\lib\function_base.py", line 4652, in insert
+    new[tuple(slobj)] = values
+ValueError: could not broadcast input array from shape (1,3) into shape (1,2)
+
+Appending elements to ndarray by using append():
+-----------------------------------------------
+insert()--->To insert elements at our required position
+append()--->To insert elements at last
+
+Syntax:
+insert(array,object,values,axis)
+append(array,values,axis)
+
+append(arr, values, axis=None)
+    Append values to the end of an array.
+
+eg: 1-D array
+
+a = np.arange(10)
+np.append(a,9999)
+
+
+>>> np.append(a,9999)
+array([   0,    1,    2,    3,    4,    5,    6,    7,    8,    9, 9999])
+
+
+np.append(a,[10,20,30])
+>>> np.append(a,[10,20,30])
+array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 20, 30])
+
+
+***Note: if we are trying to append heterogeneous element, then array elements and new element will be converted to some common type and then append will be happend.
+
+	
+>>> a = np.arange(10)
+>>> a
+array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+
+np.append(a,10.5)
+>>> np.append(a,10.5)
+array([ 0. ,  1. ,  2. ,  3. ,  4. ,  5. ,  6. ,  7. ,  8. ,  9. , 10.5])
+
+
+>>> np.append(a,10.5)
+array([ 0. ,  1. ,  2. ,  3. ,  4. ,  5. ,  6. ,  7. ,  8. ,  9. , 10.5])
+>>> a
+array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+>>> np.append(a,'durga')
+array(['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'durga'],
+      dtype='<U11')
+>>> np.append(a,True)
+array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 1])
+>>> np.append(a,10+20j)
+array([ 0. +0.j,  1. +0.j,  2. +0.j,  3. +0.j,  4. +0.j,  5. +0.j,
+        6. +0.j,  7. +0.j,  8. +0.j,  9. +0.j, 10.+20.j])
+
+
+Appending elements to 2-D array:
+--------------------------------
+1. We should provide axis, otherwise None will be considered and flatten to 1-D array before append operation.
+
+***2. If we are providing axis, then all input arrays must have same number of dimensions and same shape of provided axis.
+
+a = np.array([[10,20],[30,40]])
+>>> a
+array([[10, 20],
+       [30, 40]])
+
+new row: [[70,80]]
+
+np.append(a,70)
+>>> np.append(a,70)
+array([10, 20, 30, 40, 70])
+
+eg-2:
+np.append(a,70,axis=0)
+ValueError: all the input arrays must have same number of dimensions, but the array 
+at index 0 has 2 dimension(s) and the array at index 1 has 0 dimension(s)
+
+eg-3:
+np.append(a,[70,80],axis=0)
+ValueError: all the input arrays must have same number of dimensions, but the array at index 0 has 2 dimension(s) and the array at index 1 has 1 dimension(s)
+
+
+eg-4:
+np.append(a,[[70,80]],axis=0)
+
+>>> np.append(a,[[70,80]],axis=0)
+array([[10, 20],
+       [30, 40],
+       [70, 80]])
+
+>>> np.append(a,[[70,80],[90,100]],axis=0)
+array([[ 10,  20],
+       [ 30,  40],
+       [ 70,  80],
+       [ 90, 100]])
+
+EG-5:
+np.append(a,[[70,80]],axis=1)
+
+ValueError: all the input array dimensions for the concatenation axis must match exactly, but along dimension 0, the array at index 0 has size 2 and the array at index 1 has size 1
+
+
+
+np.append(a,[[70],[80]],axis=1)
+>>> np.append(a,[[70],[80]],axis=1)
+array([[10, 20, 70],
+       [30, 40, 80]])
+
+
+
+np.append(a,[[70,80],[90,100]],axis=1)
+>>> np.append(a,[[70,80],[90,100]],axis=1)
+array([[ 10,  20,  70,  80],
+       [ 30,  40,  90, 100]])
+
+
+Q. Consider the array?
+>>> a = np.arange(12).reshape(4,3)
+>>> a
+array([[ 0,  1,  2],
+       [ 3,  4,  5],
+       [ 6,  7,  8],
+       [ 9, 10, 11]])
+
+Which of the following operations will be performed successfully?
+A. np.append(a,[[10,20,30]],axis=0) #valid
+B. np.append(a,[[10,20,30]],axis=1) #invalid
+C. np.append(a,[[10],[20],[30]],axis=0) #invalid
+D. np.append(a,[[10],[20],[30],[40]],axis=1) #valid
+E. np.append(a,[[10,20,30],[40,50,60]],axis=0) #valid
+F. np.append(a,[[10,20],[30,40],[50,60],[70,80]],axis=1) #valid
+
+
+Q. What is the difference between insert() and append() functions?
+By using insert() function we can insert elements at our required index position.
+But by using append() function, we can add elements always at the end of ndarray.
+
+Deletion of elements from ndarray:
+----------------------------------
+We can delete elements by using delete() function of numpy module.
+
+delete(arr, obj, axis=None)
+
+To delete elements of 1-D array:
+--------------------------------
+a = np.arange(10,101,10)
+
+1. np.delete(a,3) # to delete element locating at index: 3
+
+2. np.delete(a,[0,4,6]) ## to delete elements locating at indices:0,4,6
+
+3. np.delete(a,np.s_[2:6]) # to delete elements locating from 2nd index to 5th index
+
+
+>>> a = np.arange(10,101,10)
+>>> a
+array([ 10,  20,  30,  40,  50,  60,  70,  80,  90, 100])
+>>> np.delete(a,3)
+array([ 10,  20,  30,  50,  60,  70,  80,  90, 100])
+>>> np.delete(a,[0,4,6])
+array([ 20,  30,  40,  60,  80,  90, 100])
+>>> np.delete(a,np.s_[2:6])
+array([ 10,  20,  70,  80,  90, 100])
+
+
+np.delete(a,range(2,6))
+
+
+To delete elements of 2-D array:
+--------------------------------
+We should provide axis. If we are not providing axis, then array will be flatten to 1-D array and then deletion will be happend.
+
+a = np.arange(1,13).reshape(3,4)
+
+
+>>> a = np.arange(1,13).reshape(3,4)
+>>> a
+array([[ 1,  2,  3,  4],
+       [ 5,  6,  7,  8],
+       [ 9, 10, 11, 12]])
+
+np.delete(a,1) #flatten to 1-D array and then deletion
+
+>>> np.delete(a,1)
+array([ 1,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12])
+
+
+
+np.delete(a,0,axis=0) # to delete 0th row
+np.delete(a,[0,2],axis=0) # to delete 0th row and 2nd row
+np.delete(a,np.s_[:2],axis=0) # to delete 0th row and 1st rows
+
+
+>>> a = np.arange(1,13).reshape(3,4)
+>>> a
+array([[ 1,  2,  3,  4],
+       [ 5,  6,  7,  8],
+       [ 9, 10, 11, 12]])
+>>> np.delete(a,1)
+array([ 1,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12])
+>>> [ 5,  6,  7,  8],
+([5, 6, 7, 8],)
+>>> np.delete(a,0,axis=0)
+array([[ 5,  6,  7,  8],
+       [ 9, 10, 11, 12]])
+>>> np.delete(a,[0,2],axis=0)
+array([[5, 6, 7, 8]])
+>>> np.delete(a,np.s_[:2],axis=0)
+array([[ 9, 10, 11, 12]])
+
+
+>>> a
+array([[ 1,  2,  3,  4],
+       [ 5,  6,  7,  8],
+       [ 9, 10, 11, 12]])
+ 
+np.delete(a,0,axis=1)
+np.delete(a,[0,2],axis=1)
+np.delete(a,np.s_[::3],axis=1)
+np.delete(a,np.s_[1:],axis=1)
+
+
+Delete elements from 3-D array:
+-------------------------------
+a = np.arange(24).reshape(2,3,4)
+>>> a
+array([[[ 0,  1,  2,  3],
+        [ 4,  5,  6,  7],
+        [ 8,  9, 10, 11]],
+
+       [[12, 13, 14, 15],
+        [16, 17, 18, 19],
+        [20, 21, 22, 23]]])
+
+axis-0--->index of 2-D array
+axis-1--->Rows in every 2-D array
+axis-2--->columns in every 2-D array
+
+np.delete(a,3) #flatten to 1-D array and delete 3rd index element
+
+>>> np.delete(a,3)
+array([ 0,  1,  2,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16, 17,
+       18, 19, 20, 21, 22, 23])
+
+np.delete(a,0,axis=0) #To delete first 2-D array
+
+np.delete(a,1,axis=0)
+
+np.delete(a,1,axis=1)
+   To delete 1st indexed row in every 2-D array
+
+np.delete(a,2,axis=2)
+np.delete(a,[0,2],axis=2)
+
+
+np.delete(a,np.s_[1:],axis=2)
+
+>>> a = np.arange(24).reshape(2,3,4)
+>>> a
+array([[[ 0,  1,  2,  3],
+        [ 4,  5,  6,  7],
+        [ 8,  9, 10, 11]],
+
+       [[12, 13, 14, 15],
+        [16, 17, 18, 19],
+        [20, 21, 22, 23]]])
+>>> np.delete(a,3)
+array([ 0,  1,  2,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16, 17,
+       18, 19, 20, 21, 22, 23])
+>>> np.delete(a,0,axis=0)
+array([[[12, 13, 14, 15],
+        [16, 17, 18, 19],
+        [20, 21, 22, 23]]])
+>>> np.delete(a,1,axis=0)
+array([[[ 0,  1,  2,  3],
+        [ 4,  5,  6,  7],
+        [ 8,  9, 10, 11]]])
+>>>
+>>> np.delete(a,1,axis=1)
+array([[[ 0,  1,  2,  3],
+        [ 8,  9, 10, 11]],
+
+       [[12, 13, 14, 15],
+        [20, 21, 22, 23]]])
+>>> np.delete(a,2,axis=2)
+array([[[ 0,  1,  3],
+        [ 4,  5,  7],
+        [ 8,  9, 11]],
+
+       [[12, 13, 15],
+        [16, 17, 19],
+        [20, 21, 23]]])
+>>> np.delete(a,[0,2],axis=2)
+array([[[ 1,  3],
+        [ 5,  7],
+        [ 9, 11]],
+
+       [[13, 15],
+        [17, 19],
+        [21, 23]]])
+>>> np.delete(a,np.s_[1:],axis=2)
+array([[[ 0],
+        [ 4],
+        [ 8]],
+
+       [[12],
+        [16],
+        [20]]])
+
+
+Case Study:
+-----------
+Q. Consider the following array:
+>>> a = np.arange(12).reshape(4,3)
+>>> a
+array([[ 0,  1,  2],
+       [ 3,  4,  5],
+       [ 6,  7,  8],
+       [ 9, 10, 11]])
+
+Delete last row and insert following row in that place:
+[70,80,90]
+
+Solution:
+>>> a = np.arange(12).reshape(4,3)
+>>> a
+array([[ 0,  1,  2],
+       [ 3,  4,  5],
+       [ 6,  7,  8],
+       [ 9, 10, 11]])
+>>> b = np.delete(a,3,axis=0)
+>>> b
+array([[0, 1, 2],
+       [3, 4, 5],
+       [6, 7, 8]])
+>>> np.append(b,[[70,80,90]],axis=0)
+array([[ 0,  1,  2],
+       [ 3,  4,  5],
+       [ 6,  7,  8],
+       [70, 80, 90]])
+
+Summary:
+---------
+insert()-->Insert elements into an array at specified index.
+append()-->Append elements at the end of an array.
+delete()--->Delete elements from an array.
+
+
+Chapter-16: Matrix multiplication by using dot() function
+---------------------------------------------------------
+ndarrays  :  a and b
+
+a*b --->element level multiplication will be happend.
+>>> a = np.array([[10,20],[30,40]])
+>>> b = np.array([[1,2],[3,4]])
+>>> a
+array([[10, 20],
+       [30, 40]])
+>>> b
+array([[1, 2],
+       [3, 4]])
+>>> a*b
+array([[ 10,  40],
+       [ 90, 160]])
+
+If we want matrix multiplication then we should go for dot() function.
+
+np.dot(a,b)
+a.dot(b)
+
+
+>>> import numpy as np
+>>> a = np.array([[10,20],[30,40]])
+>>> b = np.array([[1,2],[3,4]])
+>>> a
+array([[10, 20],
+       [30, 40]])
+>>> b
+array([[1, 2],
+       [3, 4]])
+>>> a*b
+array([[ 10,  40],
+       [ 90, 160]])
+>>> np.dot(a,b)
+array([[ 70, 100],
+       [150, 220]])
+>>> a.dot(b)
+array([[ 70, 100],
+       [150, 220]])
+>>> a
+array([[10, 20],
+       [30, 40]])
+ 
+
+Chapter-17: Importance of matrix class in numpy library
+-------------------------------------------------------
+1-D array is called--->Vector
+2-D array is called-->Matrix
+
+matrix class is specially designed class to create 2-D arrays.
+
+How to create 2-D array:
+------------------------
+1. By using ndarray
+2. By using matrix class
+
+
+class matrix(ndarray)
+ |  matrix(data, dtype=None, copy=True)
+
+data : array_like or string
+ |     If `data` is a string, it is interpreted as a matrix with commas
+ |     or spaces separating columns, and semicolons separating rows.
+
+
+eg-1: Creating matrix object from string
+a = np.matrix('col1 col2 col3;col1 col2 col3')
+a = np.matrix('col1,col2,col3;col1,col2,col3')
+
+a = np.matrix('10,20;30,40')
+
+
+eg-2: Creating matrix object from nested list
+
+a = np.matrix([[10,20],[30,40]])
+
+>>> a = np.matrix([[10,20],[30,40]])
+>>> a
+matrix([[10, 20],
+        [30, 40]])
+
+
+
+eg-3. create a matrix from ndarray
+>>> a = np.arange(6).reshape(3,2)
+>>> type(a)
+<class 'numpy.ndarray'>
+>>> b = np.matrix(a)
+>>> type(b)
+<class 'numpy.matrix'>
+>>> b
+matrix([[0, 1],
+        [2, 3],
+        [4, 5]])
+>>> a
+array([[0, 1],
+       [2, 3],
+       [4, 5]])
+
+conclusions:
+------------
+1. matrix is child class of ndarray class. Hence all methods and attributes of ndarray class are applicable ot matrix also.
+
+2. We can use +,*,T,** for matrix objects also.
+3. In the case of ndarray, * operator performs element level multiplication.
+   But in case of matrix, * operator preforms matrix multiplication.
+
+4. In the case of ndarray, ** operator performs power operation at element level.
+But in the case of matrix,** operator performs 'matrix' power.
+
+
+5. matrix class always meant for 2-D array only.
+
+6. It is no longer recommended to use.
+
+
+>>> a = np.array([[1,2],[3,4]])
+>>> m = np.matrix([[1,2],[3,4]])
+>>> a
+array([[1, 2],
+       [3, 4]])
+>>> m
+matrix([[1, 2],
+        [3, 4]])
+>>> a+a
+array([[2, 4],
+       [6, 8]])
+>>> m+m
+matrix([[2, 4],
+        [6, 8]])
+>>> a*a
+array([[ 1,  4],
+       [ 9, 16]])
+>>> m*m
+matrix([[ 7, 10],
+        [15, 22]])
+>>> a
+array([[1, 2],
+       [3, 4]])
+>>> a**2
+array([[ 1,  4],
+       [ 9, 16]], dtype=int32)
+>>> m**2
+matrix([[ 7, 10],
+        [15, 22]])
+>>> a
+array([[1, 2],
+       [3, 4]])
+>>> a.T
+array([[1, 3],
+       [2, 4]])
+>>> m
+matrix([[1, 2],
+        [3, 4]])
+>>> m.T
+matrix([[1, 3],
+        [2, 4]])
+
+Differences between ndarray and matrix:
+---------------------------------------
+table
+
+Linear Algebra functions from linalg module:
+--------------------------------------------
+numpy.linalg --->To perform linear algebra operations
+
+1. inv() ---->To find inverse of a matrix
+2. matrix_power() ---->To find power of a matrix like A^n
+3. det() --->To find determinant of a matrix
+4. solve() --->To solve linear algebra equations
+etc
+
+
+1. inv() ---->To find inverse of a matrix
+-------------------------------------------------
+inv(a)
+    Compute the (multiplicative) inverse of a matrix.
+
+    Given a square matrix `a`, return the matrix `ainv` satisfying
+    ``dot(a, ainv) = dot(ainv, a) = eye(a.shape[0])``.
+
+
+>>> a = np.array([[1,2],[3,4]])
+>>> a
+array([[1, 2],
+       [3, 4]])
+>>> ainv = np.linalg.inv(a)
+>>> ainv
+array([[-2. ,  1. ],
+       [ 1.5, -0.5]])
+ 
+How to check:
+-------------
+np.dot(a,ainv) = I
+
+
+>>> a = np.array([[1,2],[3,4]])
+>>> a
+array([[1, 2],
+       [3, 4]])
+>>> ainv = np.linalg.inv(a)
+>>> ainv
+array([[-2. ,  1. ],
+       [ 1.5, -0.5]])
+>>> i = np.eye(2)
+>>> i
+array([[1., 0.],
+       [0., 1.]])
+>>> np.dot(a,ainv)
+array([[1.0000000e+00, 0.0000000e+00],
+       [8.8817842e-16, 1.0000000e+00]])
+>>> np.allclose(np.dot(a,ainv),i)
+
+
+Note:
+allclose(a, b, rtol=1e-05, atol=1e-08, equal_nan=False)
+    Returns True if two arrays are element-wise equal within a tolerance.
+
+***Note: We can find inverse only for square matrices, otherwise we will get error.
+>>> a = np.arange(10).reshape(5,2)
+>>> a
+array([[0, 1],
+       [2, 3],
+       [4, 5],
+       [6, 7],
+       [8, 9]])
+>>> np.linalg.inv(a)
+numpy.linalg.LinAlgError: Last 2 dimensions of the array must be square
+
+How to find inverse of 3-D array:
+----------------------------------
+3-D array contains collection of 2-D arrays
+Finding inverse of 3-D array means, finding inverse for every 2-D array.
+
+a = np.arange(8).reshape(2,2,2)
+two 2-D arrays
+
+
+
+>>> a = np.arange(8).reshape(2,2,2)
+>>> a
+array([[[0, 1],
+        [2, 3]],
+
+       [[4, 5],
+        [6, 7]]])
+>>> np.linalg.inv(a)
+array([[[-1.5,  0.5],
+        [ 1. ,  0. ]],
+
+       [[-3.5,  2.5],
+        [ 3. , -2. ]]])
+
+2. matrix_power() ---->To find power of a matrix like A^n
+---------------------------------------------------------
+np.linalg.matrix_power(a,n)
+
+If n==0 ===>Identity Matrix
+If n>0 ===>normal power operation
+If n<0 ===>First inverse and then power operation for absolute value
+
+
+matrix_power(a, n)
+    Raise a square matrix to the (integer) power `n`.
+
+    For positive integers `n`, the power is computed by repeated matrix
+    squarings and matrix multiplications. If ``n == 0``, the identity matrix
+    of the same shape as M is returned. If ``n < 0``, the inverse
+    is computed and then raised to the ``abs(n)``.
+
+a = np.array([[1,2],[3,4]])
+>>> a
+array([[1, 2],
+       [3, 4]])
+
+>>> a = np.array([[1,2],[3,4]])
+>>> a
+array([[1, 2],
+       [3, 4]])
+>>> np.linalg.matrix_power(a,0)
+array([[1, 0],
+       [0, 1]])
+>>> np.linalg.matrix_power(a,2)
+array([[ 7, 10],
+       [15, 22]])
+>>> np.linalg.matrix_power(a,-2)
+array([[ 5.5 , -2.5 ],
+       [-3.75,  1.75]])
+>>> np.dot(np.linalg.inv(a),np.linalg.inv(a))
+array([[ 5.5 , -2.5 ],
+       [-3.75,  1.75]])
+>>> np.linalg.matrix_power(np.linalg.inv(a),2)
+array([[ 5.5 , -2.5 ],
+       [-3.75,  1.75]])
+
+
+Note: We can find matrix_power only for a square matrix,otherwise we will get error.
+
+>>> a = np.arange(10).reshape(5,2)
+>>> a
+array([[0, 1],
+       [2, 3],
+       [4, 5],
+       [6, 7],
+       [8, 9]])
+>>> np.linalg.matrix_power(a,2)
+numpy.linalg.LinAlgError: Last 2 dimensions of the array must be square
+
+3. det() --->To find determinant of a matrix
+--------------------------------------------
+Syntax:
+det(a)
+
+>>> a = np.array([[1,2],[3,4]])
+>>> a
+array([[1, 2],
+       [3, 4]])
+>>> np.linalg.det(a)
+-2.0000000000000004
+
+For 3X3 matrix:
+---------------
+>>> a = np.arange(9).reshape(3,3)
+>>> a
+array([[0, 1, 2],
+       [3, 4, 5],
+       [6, 7, 8]])
+>>> np.linalg.det(a)
+0.0
+
+Note: We can find determinant only for square matrices, otherwise we will get error.
+>>> a = np.arange(10).reshape(5,2)
+>>> np.linalg.det(a)
+numpy.linalg.LinAlgError: Last 2 dimensions of the array must be square
+
+4. solve() --->To solve linear algebra equations
+-------------------------------------------------
+solve(a, b)
+    Solve a linear matrix equation, or system of linear scalar equations.
+
+    Computes the "exact" solution, `x`, of the well-determined, i.e., full
+    rank, linear matrix equation `ax = b`.
+
+    Parameters
+    ----------
+    a : (..., M, M) array_like
+        Coefficient matrix.
+    b : {(..., M,), (..., M, K)}, array_like
+        Ordinate or "dependent variable" values.
+
+Case Study:
+-----------
+case study:
+---------------
+Problem:
+Boys and Girls are attending Durga sir's datascience class.
+For boys fee is $3 and for girls fee is $8. For a certain batch 2200 people attented and $10100 fee collected. How many boys and girls attended for that batch?
+
+assume x is number of boys
+assume y is number of girls
+
+x+y = 2200===>x = 2200-y
+3x+8y=10100
+
+
+3(2200-y)+8y=10100
+
+6600-3y+8y = 10100
+
+5y=10100-6600
+5y=3500
+y=700
+x=1500
+
+
+x+y = 2200
+3x+8y=10100
+
+a = np.array([[1,1],[3,8]])
+b = np.array([2200,10100])
+
+
+>>> a = np.array([[1,1],[3,8]])
+>>> b = np.array([2200,10100])
+>>> a
+array([[1, 1],
+       [3, 8]])
+>>> b
+array([ 2200, 10100])
+>>> np.linalg.solve(a,b)
+array([1500.,  700.])
+
+eg-2:
+-4x+7y-2z = 2
+x-2y+z = 3
+2x-3y+z = -4
+
+a = np.array([[-4,7,-2],[1,-2,1],[2,-3,1]])
+b = np.array([2,3,-4])
+np.linalg.solve(a,b)
+array([-13.,  -6.,   4.])
+x=-13,
+y=-6
+z=4
+
+x-2y+z = 3
+-13+12+4=3
+
+
+1. inv() ---->To find inverse of a matrix
+2. matrix_power() ---->To find power of a matrix like A^n
+3. det() --->To find determinant of a matrix
+4. solve() --->To solve linear algebra equations
+etc
+
+I/O Operations with Numpy:
+--------------------------
+We can save/write ndarray objects to a binary file for future purpose.
+Later point of time, when ever these objects are required, we can read from that binary file.
+
+save()--->to save/write ndarry object to a file
+load() --->to read ndarray object from a file
+
+save(file, arr, allow_pickle=True, fix_imports=True)
+    Save an array to a binary file in NumPy ``.npy`` format.
+
+
+load(file, mmap_mode=None, allow_pickle=False, fix_imports=True, encoding='ASCII')
+    Load arrays or pickled objects from ``.npy``, ``.npz`` or pickled files.
+
+eg-1: Saving ndarray object to a file and read back:
+----------------------------------------------------
+import numpy as np
+a = np.array([[10,20,30],[40,50,60]]) #2-D array with shape:(2,3)
+
+#save/serialize ndarray object to a file
+np.save('out.npy',a)
+
+#load/deserialize ndarray object from a file
+out_array = np.load('out.npy')
+print(out_array)
+
+Note:
+1. The data will be stored in binary form
+2. File extension should be .npy, otherwise save() function itself will add that extension.
+3. By using save() function we can write only one obejct to the file. If we want to write multiple objects to a file then we should go for savez() function.
+
+
+Saving mulitple ndarray objects to the binary file:
+---------------------------------------------------
+import numpy as np
+a = np.array([[10,20,30],[40,50,60]]) #2-D array with shape:(2,3)
+b = np.array([[70,80],[90,100]]) #2-D array with shape:(2,2)
+
+#save/serialize ndarrays object to a file
+np.savez('out.npz',a,b)
+
+#reading ndarray objects from a file
+npzfileobj = np.load('out.npz') #returns NpzFile object
+#print(type(npzfileobj))
+print(npzfileobj.files)
+print(npzfileobj['arr_0'])
+print(npzfileobj['arr_1'])
+
+
+D:\durgaclasses>py test.py
+['arr_0', 'arr_1']
+[[10 20 30]
+ [40 50 60]]
+[[ 70  80]
+ [ 90 100]]
+
+Note:
+np.save() --->Save an array to a binary file in .npy format
+np.savez()---->Save several arrays into a single file in .npz format but in uncompressed form.
+np.savez_compressed()-->---->Save several arrays into a single file in .npz format but in compressed form.
+np.load()--->To load/read arrays from .npy or .npz files.
+
+
+compressed form:
+---------------
+import numpy as np
+a = np.array([[10,20,30],[40,50,60]]) #2-D array with shape:(2,3)
+b = np.array([[70,80],[90,100]]) #2-D array with shape:(2,2)
+
+#save/serialize ndarrays object to a file
+np.savez_compressed('out_compressed.npz',a,b)
+
+#reading ndarray objects from a file
+npzfileobj = np.load('out_compressed.npz') #returns NpzFile object
+#print(type(npzfileobj))
+print(npzfileobj.files)
+print(npzfileobj['arr_0'])
+print(npzfileobj['arr_1'])
+
+Analysis:
+---------
+D:\durgaclasses>dir out.npz  out_compressed.npz
+ Volume in drive D has no label.
+ Volume Serial Number is E2E9-F953
+
+ Directory of D:\durgaclasses
+
+29-Jun-21  11:00 AM               546 out.npz
+
+ Directory of D:\durgaclasses
+
+29-Jun-21  11:00 AM               419 out_compressed.npz
+               2 File(s)            965 bytes
+               0 Dir(s)  67,380,846,592 bytes free
+
+
+Q. We can save object in compressed form, then what is the need of uncompressed form?
+
+compressed form--->memory will be saved, but performance down.
+uncompressed form--->memory won't be saved, but performance wise good.
+
+
+Note:
+if we are using save() function the file extension: npy
+if we are using savez() or savez_compressed() functions the file extension: npz
+
+Save ndarray objects to the file in normal text format:
+-------------------------------------------------------
+savetxt() and loadtxt()
+
+savetxt(fname, X, fmt='%.18e', delimiter=' ', newline='\n', header='', footer='', comments='# ', encoding=None)
+    Save an array to a text file.
+
+
+loadtxt(fname, dtype=<class 'float'>, comments='#', delimiter=None, converters=None, skiprows=0, usecols=None, unpack=False, ndmin=0, encoding='bytes', max_rows=None, *, like=None)
+    Load data from a text file.
+
+
+
+import numpy as np
+a = np.array([[10,20,30],[40,50,60]]) #2-D array with shape:(2,3)
+
+#save/serialize ndarrays object to a file
+np.savetxt('out.txt',a,fmt='%.1f')
+
+#reading ndarray objects from a file and default dtype is float
+out_array1 = np.loadtxt('out.txt')
+print(out_array1)	`
+
+
+#reading ndarray objects from a file and default dtype is int
+out_array2 = np.loadtxt('out.txt',dtype=int)
+print(out_array2)
+
+
+
+
+TypeError: Mismatch between array dtype ('<U11') and format specifier ('%.18e %.18e')
+
+
+eg-2:
+import numpy as np
+a1 = np.array([['Sunny',1000],['Bunny',2000],['Chinny',3000],['Pinny',4000]])
+
+#save this ndarray to a text file
+np.savetxt('out.txt',a1,fmt='%s %s')
+
+#reading ndarray from the text file
+a2 = np.loadtxt('out.txt',dtype='str')
+print(a2)
+
+D:\durgaclasses>py test.py
+[['Sunny' '1000']
+ ['Bunny' '2000']
+ ['Chinny' '3000']
+ ['Pinny' '4000']]
+
+
+out.txt:
+-------
+Sunny 1000
+Bunny 2000
+Chinny 3000
+Pinny 4000
+Zinny 5000
+Vinny 6000
+Minny 7000
+Tinny 8000
+
+creating ndarray from text file data:
+import numpy as np
+#reading ndarray from the text file
+a2 = np.loadtxt('out.txt',dtype='str')
+print(a2)
+
+
+Writing ndarray objects to the csv file:
+----------------------------------------
+csv--->comma separated values
+
+import numpy as np
+
+a1 = np.array([[10,20,30],[40,50,60]])
+
+#save/serialize to a csv file
+np.savetxt('out.csv',a1,delimiter=',')
+
+#reading ndarray object from a csv file
+a2 = np.loadtxt('out.csv',delimiter=',')
+print(a2)
+
+Summary:
+--------
+1. Save one ndarray object to the binary file(save() and load())
+2. Save multiple ndarray objects to the binary file in uncompressed form(savez() and load())
+3. Save multiple ndarray objects to the binary file in compressed form(savez_compressed() and load())
+4. Save ndarry object to the text file (savetxt() and loadtxt())
+5. Save ndarry object to the csv file (savetxt() and loadtxt() with delimiter=',')
+
+Basic Statistics with Numpy:
+----------------------------
+100 years every minute temparature is available wrt hyderabad city.
+
+Cricket Batsman
+Data
+
+In Datascience domain, we required to collect,store and analyze huge amount of data. From this data we may required to find some basic statistics like
+
+1. Minimum value
+2. Maximum value
+3. Average Value
+4. Sum of all values
+5. Mean value
+6. Median value
+7. Variance
+8. Standard deviation etc
+
+1 met person--->IIIT Hyderabad-->DataScience
+2019 elections in ap
+politicians--->
+
+10th+Intermediate+degree--->20 members
+500 Rs  List of questions
+
+
+100 villages
+
+20 samples
+10 Lakhs from every mla candidate
+
+running a shop
+
+
+
+In Datascience domain, we required to collect,store and analyze huge amount of data. From this data we may required to find some basic statistics like
+
+1. Minimum value
+2. Maximum value
+3. Average Value
+4. Sum of all values
+5. Mean value
+6. Median value
+7. Variance
+8. Standard deviation etc
+
+
+1. Minimum value:
+-----------------
+np.min(a)
+np.amin(a)
+a.min()
+
+amin(a, axis=None, out=None, keepdims=<no value>, initial=<no value>, where=<no value>)
+    Return the minimum of an array or minimum along an axis.
+    In n-dimensional arrays, if we are not providing axis, then it will be converted to 1-D array and returns minimum value.
+
+eg-1: for 1-D array
+
+>>> a = np.array([10,5,20,3,25])
+>>> a
+array([10,  5, 20,  3, 25])
+>>> np.min(a)
+3
+>>> np.amin(a)
+3
+>>> a.min()
+3
+
+>>> a.amin()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'numpy.ndarray' object has no attribute 'amin'
+
+eg-2: For 2-D array:
+--------------------
+a = np.array([[100,20,30],[10,50,60],[25,15,18],[4,5,19]])
+>>> a
+array([[100,  20,  30],
+       [ 10,  50,  60],
+       [ 25,  15,  18],
+       [  4,   5,  19]])
+
+
+>>> np.min(a)
+4
+>>> np.min(a)
+4
+
+>>> a
+array([[100,  20,  30],
+       [ 10,  50,  60],
+       [ 25,  15,  18],
+       [  4,   5,  19]])
+>>> np.min(a,axis=0) #returns minimum row and that row contains 3 elements
+array([ 4,  5, 18])
+>>> np.min(a,axis=1) #returns minimum column and that column contains 4 elements
+array([20, 10, 15,  4])
+
+eg-3: for 2-D array:
+--------------------
+a = np.arange(24).reshape(6,4)
+
+>>> a = np.arange(24).reshape(6,4)
+>>> a
+array([[ 0,  1,  2,  3],
+       [ 4,  5,  6,  7],
+       [ 8,  9, 10, 11],
+       [12, 13, 14, 15],
+       [16, 17, 18, 19],
+       [20, 21, 22, 23]])
+>>> np.min(a)
+0
+>>> np.min(a,axis=0)
+array([0, 1, 2, 3])
+>>> np.min(a,axis=1)
+array([ 0,  4,  8, 12, 16, 20])
+
+eg-4:
+>>> a = np.arange(24)
+>>> a
+array([ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15, 16,
+       17, 18, 19, 20, 21, 22, 23])
+>>> np.random.shuffle(a)
+>>> a
+array([13, 19, 12, 15,  2,  6,  5, 14,  8, 21, 10, 11, 22,  0, 18,  4, 20,
+       17,  7,  9, 23,  1,  3, 16])
+>>> a = a.reshape(6,4)
+>>> a
+array([[13, 19, 12, 15],
+       [ 2,  6,  5, 14],
+       [ 8, 21, 10, 11],
+       [22,  0, 18,  4],
+       [20, 17,  7,  9],
+       [23,  1,  3, 16]])
+>>> np.min(a)
+0
+>>> np.min(a,axis=0)
+array([2, 0, 3, 4])
+>>> np.min(a,axis=1)
+array([12,  2,  8,  0,  7,  1])
+
+2. Finding Maximum value:
+-------------------------
+np.amax(a)
+np.max(a)
+a.max()
+
+
+eg-1: For 1-D array:
+--------------------
+>>> a = np.array([10,5,20,3,25])
+>>> a
+array([10,  5, 20,  3, 25])
+>>> np.amax(a)
+25
+>>> np.max(a)
+25
+>>> a.max()
+25
+
+eg-2: for 2-D array:
+--------------------
+>>> a = np.array([[100,20,30],[10,50,60],[25,15,18],[4,5,19]])
+>>> a
+array([[100,  20,  30],
+       [ 10,  50,  60],
+       [ 25,  15,  18],
+       [  4,   5,  19]])
+>>> np.max(a)
+100
+>>> np.max(a,axis=0)
+array([100,  50,  60])
+>>> np.max(a,axis=1)
+array([100,  60,  25,  19])
+
+3. Finding sum of elements:
+---------------------------
+np.sum(a)
+a.sum()
+
+>>> a = np.arange(4)
+>>> a
+array([0, 1, 2, 3])
+>>> np.sum(a)
+6
+>>> a.sum()
+6
+>>> a = np.arange(9).reshape(3,3)
+>>> a
+array([[0, 1, 2],
+       [3, 4, 5],
+       [6, 7, 8]])
+>>> np.sum(a)
+36
+>>> a.sum()
+36
+>>> np.sum(a,axis=0)
+array([ 9, 12, 15])
+>>> np.sum(a,axis=1)
+array([ 3, 12, 21])
+
+Finding Mean value:
+-------------------
+Mean is the sum of elements along the specified axis divided by number of elements.
+
+sum of elements/number of elements
+
+np.mean(a)
+a.mean()
+
+
+Help on function mean in module numpy:
+
+mean(a, axis=None, dtype=None, out=None, keepdims=<no value>, *, where=<no value>)
+    Compute the arithmetic mean along the specified axis.
+
+Returns the average of the array elements.  The average is taken over
+    the flattened array by default, otherwise over the specified axis.
+    `float64` intermediate and return values are used for integer inputs.
+
+eg-1: for 1-D array:
+---------------------
+a = np.arange(5)
+
+
+>>> a = np.arange(5)
+>>> a
+array([0, 1, 2, 3, 4])
+>>> np.mean(a)
+2.0
+>>> a.mean()
+2.0
+
+
+eg-2: for 2-D array:
+-------------------
+>>> a = np.arange(9).reshape(3,3)
+>>> a
+array([[0, 1, 2],
+       [3, 4, 5],
+       [6, 7, 8]])
+>>> np.mean(a)
+4.0
+>>> np.mean(a,axis=0)
+array([3., 4., 5.])
+>>> np.mean(a,axis=1)
+array([1., 4., 7.])
+>>> np.mean(a,dtype=int)
+4
+
+5. Finding Median value by using numpy.median() function:
+---------------------------------------------------------
+Mean means average
+Median means middle element of the array
+
+
+10 20 30 --->20 (number of elements is odd)
+10 20 30 40--->Average/Mean of middle 2 elements (number of elements is even)
+           --->25.0
+
+np.median(a)
+
+median(a, axis=None, out=None, overwrite_input=False, keepdims=False)
+    Compute the median along the specified axis.
+eg-1: for 1-D array:
+------------------
+>>> a = np.array([10,20,30,40])
+>>> np.median(a)
+25.0
+
+>>> a = np.array([10,20,30])
+>>> np.median(a)
+20.0
+
+
+eg-2: for 2-D array:
+--------------------
+>>> a = np.arange(9).reshape(3,3)
+>>> a
+array([[0, 1, 2],
+       [3, 4, 5],
+       [6, 7, 8]])
+>>> np.median(a)
+4.0
+>>> np.median(a,axis=0)
+array([3., 4., 5.])
+>>> np.median(a,axis=1)
+array([1., 4., 7.])
+
+eg-2: for 2-D array:
+---------------------
+>>> a = np.arange(16).reshape(4,4)
+>>> a
+array([[ 0,  1,  2,  3],
+       [ 4,  5,  6,  7],
+       [ 8,  9, 10, 11],
+       [12, 13, 14, 15]])
+>>> np.median(a)
+7.5
+>>> np.median(a,axis=0)
+array([6., 7., 8., 9.])
+>>> np.median(a,axis=1)
+array([ 1.5,  5.5,  9.5, 13.5])
+
+Note:
+Mean means average where as Median means middle element
+
+Finding Variance of the ndarray:
+--------------------------------
+The variance is a measure of variability. It is calculated by taking the average of squared deviations from the mean.
+
+average of 
+squared
+deviations from the mean.
+
+
+NUMPY contains var() function to find variance.
+
+eg-1: For 1-D array:
+--------------------
+a = [1,2,3,4,5]
+
+mean(a) = 3.0
+deviations from the mean: [-2.0,-1.0,0.0,1.0,2.0]
+squares of deviations from the mean: [4.0,1.0,0.0,1.0,4.0]
+Average of squares of deviations from the mean: 2.0===>VARIANCE
+
+
+>>> a = np.array([1,2,3,4,5])
+>>> np.var(a)
+2.0
+
+
+
+For 2-D array:
+--------------
+>>> a = np.arange(6).reshape(2,3)
+>>> a
+array([[0, 1, 2],
+       [3, 4, 5]])
+>>> np.var(a)
+2.9166666666666665
+>>> np.var(a,axis=0)
+array([2.25, 2.25, 2.25])
+>>> np.var(a,axis=1)
+array([0.66666667, 0.66666667])
+
+Note: ndarray class also contains var() method
+np.var(a)
+a.var()
+
+Finding stadard deviation by using numpy.std() function:
+--------------------------------------------------------
+Standard deviation is the square root of the variance.
+Variance means the average of squares of deviations from the mean.
+
+eg-1: for 1-D array:
+--------------------
+>>> a = np.array([1,2,3,4,5])
+>>> a
+array([1, 2, 3, 4, 5])
+>>> np.var(a)
+2.0
+>>> np.std(a)
+1.4142135623730951
+
+
+eg-2: For 2-D array:
+--------------------
+>>> a = np.arange(9).reshape(3,3)
+>>> a
+array([[0, 1, 2],
+       [3, 4, 5],
+       [6, 7, 8]])
+>>> np.var(a)
+6.666666666666667
+>>> np.std(a)
+2.581988897471611
+>>> np.var(a,axis=0)
+array([6., 6., 6.])
+>>> np.std(a,axis=0)
+array([2.44948974, 2.44948974, 2.44948974])
+>>> np.std(a,axis=1)
+array([0.81649658, 0.81649658, 0.81649658])
+
+Note: ndarray class also contains std() method
+>>> a
+array([[0, 1, 2],
+       [3, 4, 5],
+       [6, 7, 8]])
+>>> a.std()
+2.581988897471611
+>>> a.std(axis=0)
+array([2.44948974, 2.44948974, 2.44948974])
+>>> a.std(axis=1)
+array([0.81649658, 0.81649658, 0.81649658])
+
+
+Summary:
+--------
+1. np.min(a)/np.amin(a)/a.min()--->Returns the minimum value of the array
+2. np.max(a)/np.amax(a)/a.max()--->Returns the maximum value of the array
+3. np.sum(a)/a.sum()--->Returns the Sum of values of the array
+4. np.mean(a)/a.mean()--->Returns the arithmetic mean of the array.
+5. np.median(a) --->Returns median value of the array
+6. np.var(a)/a.var() --->Returns variance of the values in the array
+7. np.std(a)/a.std() --->Returns Standard deviation of the values in the array
+
+
+Numpy Mathematical Functions:
+-----------------------------
+The functions which operates element by element on whole array, are called universal functions.
+
+To perform mathematical operations numpy library contains several universal functions(ufunc).
+
+1. np.exp(a) --->Takes e to the power of each value. e value: 2.7182
+2. np.sqrt(a) --->Returns square root of each value.
+3. np.log(a) --->Returns logarithm of each value.
+4. np.sin(a) ---->Returns the sine of each value.
+5. np.cos(a) --->Returns the co-sine of each value.
+6. np.tan(a) --->Returns the tangent of each value.
+etc
+
+>>> a = np.array([[1,2],[3,4]])
+>>> np.exp(a)
+array([[ 2.71828183,  7.3890561 ],
+       [20.08553692, 54.59815003]])
+>>> a = np.arange(5)
+>>> a
+array([0, 1, 2, 3, 4])
+>>> np.exp(a)
+array([ 1.        ,  2.71828183,  7.3890561 , 20.08553692, 54.59815003])
+>>> np.sqrt(a)
+array([0.        , 1.        , 1.41421356, 1.73205081, 2.        ])
+>>> np.log(a)
+<stdin>:1: RuntimeWarning: divide by zero encountered in log
+array([      -inf, 0.        , 0.69314718, 1.09861229, 1.38629436])
+>>> np.sin(a)
+array([ 0.        ,  0.84147098,  0.90929743,  0.14112001, -0.7568025 ])
+>>> np.cos(a)
+array([ 1.        ,  0.54030231, -0.41614684, -0.9899925 , -0.65364362])
+>>> np.tan(a)
+array([ 0.        ,  1.55740772, -2.18503986, -0.14254654,  1.15782128])
+
+
+How to find unique items and count:
+-----------------------------------
+unique() function
+
+unique(ar, return_index=False, return_inverse=False, return_counts=False, axis=None)
+    Find the unique elements of an array.
+
+eg-1: To get array with unique values:
+--------------------------------------
+>>> a = np.array([1,1,2,3,4,2,3,4,4,1,2,3,4,5,5,6])
+>>> a
+array([1, 1, 2, 3, 4, 2, 3, 4, 4, 1, 2, 3, 4, 5, 5, 6])
+>>> np.unique(a)
+array([1, 2, 3, 4, 5, 6])
+
+eg-2: To get indices also:
+---------------------------
+>>> items,indices = np.unique(a,return_index=True)
+>>> items
+array([1, 2, 3, 4, 5, 6])
+>>> indices
+array([ 0,  2,  3,  4, 13, 15], dtype=int64)
+
+eg-3: To get count also:
+------------------------
+>>> items,counts = np.unique(a,return_counts=True)
+>>> a
+array([1, 1, 2, 3, 4, 2, 3, 4, 4, 1, 2, 3, 4, 5, 5, 6])
+>>> items
+array([1, 2, 3, 4, 5, 6])
+>>> counts
+array([3, 3, 3, 4, 2, 1], dtype=int64)
+
+eg-4: To get all:
+------------------
+>>> items,indices,counts = np.unique(a,return_index=True,return_counts=True)
+>>> items
+array([1, 2, 3, 4, 5, 6])
+>>> indices
+array([ 0,  2,  3,  4, 13, 15], dtype=int64)
+>>> counts
+array([3, 3, 3, 4, 2, 1], dtype=int64)
+
+
+test.py:
+--------
+import numpy as np
+a = np.array(['a','a','b','c','a','a','b','c','a','b','d'])
+items,indices,counts = np.unique(a,return_index=True,return_counts=True)
+for item,index,count in zip(np.nditer(items),np.nditer(indices),np.nditer(counts)):
+	print(f"Element '{item}' occurred {count} times and its first occurrence index:{index}")
+
+
+D:\durgaclasses>py test.py
+Element 'a' occurred 5 times and its first occurrence index:0
+Element 'b' occurred 3 times and its first occurrence index:2
+Element 'c' occurred 2 times and its first occurrence index:3
+Element 'd' occurred 1 times and its first occurrence index:10
+
+Creation of array by using diag() function:
+-------------------------------------------
+diag(v, k=0)
+    Extract a diagonal or construct a diagonal array.
+
+Parameters
+----------
+    v : array_like
+        If `v` is a 2-D array, return a copy of its `k`-th diagonal.
+        If `v` is a 1-D array, return a 2-D array with `v` on the `k`-th
+        diagonal.
+    k : int, optional
+        Diagonal in question. The default is 0. Use `k>0` for diagonals
+        above the main diagonal, and `k<0` for diagonals below the main
+        diagonal.
+>>> a = np.arange(1,10).reshape(3,3)
+>>> a
+array([[1, 2, 3],
+       [4, 5, 6],
+       [7, 8, 9]])
+>>> np.diag(a,k=0)
+array([1, 5, 9])
+>>> np.diag(a,k=1)
+array([2, 6])
+>>> np.diag(a,k=1)
+array([2, 6])
+>>> np.diag(a,k=-1)
+array([4, 8])
+>>> np.diag(a,k=-2)
+array([7])
+>>> np.diag(a,k=-3)
+array([], dtype=int32)
+
+
+>>> a = np.array([10,20,30,40])
+>>> np.diag(a,k=0)
+array([[10,  0,  0,  0],
+       [ 0, 20,  0,  0],
+       [ 0,  0, 30,  0],
+       [ 0,  0,  0, 40]])
+>>> np.diag(a,k=1)
+array([[ 0, 10,  0,  0,  0],
+       [ 0,  0, 20,  0,  0],
+       [ 0,  0,  0, 30,  0],
+       [ 0,  0,  0,  0, 40],
+       [ 0,  0,  0,  0,  0]])
+>>> np.diag(a,k=-1)
+array([[ 0,  0,  0,  0,  0],
+       [10,  0,  0,  0,  0],
+       [ 0, 20,  0,  0,  0],
+       [ 0,  0, 30,  0,  0],
+       [ 0,  0,  0, 40,  0]])
+
+----------------------------
+9. Creation of diagonal array by using diag() function:
+----------------------------------------------------
+Syntax:
+diag(v, k=0)
+    -->Extract a diagonal or construct a diagonal array.
+    -->If `v` is a 2-D array, return a copy of its `k`-th diagonal.
+        If `v` is a 1-D array, return a 2-D array with `v` on the `k`-th
+        diagonal.
+
+Creation of 2-D array with our provided diagonal elements:
+----------------------------------------------------------
+eg-1: Creation of 2-D array with our provided diagonal elements
+>>> a = np.diag([1,2,3])
+>>> a
+array([[1, 0, 0],
+       [0, 2, 0],
+       [0, 0, 3]])
+eg-2:
+>>> a = np.diag([1,2,3],k=1)
+>>> a
+array([[0, 1, 0, 0],
+       [0, 0, 2, 0],
+       [0, 0, 0, 3],
+       [0, 0, 0, 0]])
+eg-3:
+>>> a = np.diag([1,2,3],k=-1)
+>>> a
+array([[0, 0, 0, 0],
+       [1, 0, 0, 0],
+       [0, 2, 0, 0],
+       [0, 0, 3, 0]])
+ 
+Extract diagonal elements from the given 2-D array:
+-----------------------------------------------------
+>>> a = np.arange(16).reshape(4,4)
+>>> a
+array([[ 0,  1,  2,  3],
+       [ 4,  5,  6,  7],
+       [ 8,  9, 10, 11],
+       [12, 13, 14, 15]])
+eg-1:
+>>> np.diag(a)
+array([ 0,  5, 10, 15])
+eg-2:
+>>> np.diag(a,k=1)
+array([ 1,  6, 11])
+eg-3:
+>>> np.diag(a,k=-1)
+array([ 4,  9, 14])
+
+View and Copy:
+--------------
+View:
+-----
+View is not separate object and just it is logical representation of existing array.
+If we perform any changes to the original array, those changes will be reflected to the view. viceversa also.
+
+We can create view explicitly by using view() method of ndarray class.
+
+>>> a = np.array([10,20,30,40])
+>>> b = a.view()
+>>> b
+array([10, 20, 30, 40])
+>>> a
+array([10, 20, 30, 40])
+>>> a[0]=7777
+>>> a
+array([7777,   20,   30,   40])
+>>> b
+array([7777,   20,   30,   40])
+
+Copy:
+-----
+Copy means separate object.
+If we perform any changes to the original array, those changes won't be reflected to the Copy. viceversa also.
+
+By using copy() method of ndarray class, we can create copy of existing ndarray.
+
+>>> a = np.array([10,20,30,40])
+>>> b = a.copy()
+>>> a
+array([10, 20, 30, 40])
+>>> b
+array([10, 20, 30, 40])
+>>> a[0]=7777
+>>> a
+array([7777,   20,   30,   40])
+>>> b
+array([10, 20, 30, 40])
+
+============================================
+Chapter-23: Numpy Practice Quesions Set-1
+===========================================
+Q1. Create an array of 7 zeros?
+
+>>> np.zeros(7)
+array([0., 0., 0., 0., 0., 0., 0.])
+>>> np.zeros(7,dtype=int)
+array([0, 0, 0, 0, 0, 0, 0])
+>>> np.full(7,0)
+array([0, 0, 0, 0, 0, 0, 0])
+
+
+Q2. Create an array of 9 ones?
+>>> np.ones(9)
+array([1., 1., 1., 1., 1., 1., 1., 1., 1.])
+>>> np.ones(9,dtype=int)
+array([1, 1, 1, 1, 1, 1, 1, 1, 1])
+>>> np.full(9,1)
+array([1, 1, 1, 1, 1, 1, 1, 1, 1])
+
+
+Q3. Create an array of 10 fours?
+
+>>> np.full(10,4)
+array([4, 4, 4, 4, 4, 4, 4, 4, 4, 4])
+>>> np.zeros(10,dtype=int)+4
+array([4, 4, 4, 4, 4, 4, 4, 4, 4, 4])
+>>> np.ones(10,dtype=int)+3
+array([4, 4, 4, 4, 4, 4, 4, 4, 4, 4])
+
+Q4. Create an array of integers from 10 to 40?
+
+>>> np.arange(10,41)
+array([10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
+       27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40])
+
+
+Q5. Create an array of integers from 10 to 40 which are even?
+
+>>> np.arange(10,41,2)
+array([10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40])
+
+
+Q6. Create an array of integers from 10 to 40 which are odd?
+
+>>> np.arange(11,41,2)
+array([11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 31, 33, 35, 37, 39])
+
+
+Q7. Create an array of integers from 10 to 40 which are divisible by 7?
+
+1st way:
+-------
+>>> np.arange(14,41,7)
+array([14, 21, 28, 35])
+
+
+2nd way:
+--------
+>>> a = np.arange(10,41)
+>>> a
+array([10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26,
+       27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40])
+>>> a[a%7==0]
+array([14, 21, 28, 35])
+
+
+Q8. Create a numpy array having 10 numbers starts from 24 but only even numbers?
+
+1st way:
+-------
+>>> np.arange(24,43,2)
+array([24, 26, 28, 30, 32, 34, 36, 38, 40, 42])
+
+2nd way:
+-------
+>>> a = np.arange(24,50)
+>>> a
+array([24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
+       41, 42, 43, 44, 45, 46, 47, 48, 49])
+>>> a = a[a%2==0]
+>>> a
+array([24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48])
+>>> np.resize(a,10)
+array([24, 26, 28, 30, 32, 34, 36, 38, 40, 42])
+
+Q9. Create a 4X4 matrix with elements from 1 to 16?
+
+>>> np.arange(1,17).reshape(4,4)
+array([[ 1,  2,  3,  4],
+       [ 5,  6,  7,  8],
+       [ 9, 10, 11, 12],
+       [13, 14, 15, 16]])
+
+
+
+Q10. Create a 4X4 identity matrix?
+
+>>> np.eye(4)
+array([[1., 0., 0., 0.],
+       [0., 1., 0., 0.],
+       [0., 0., 1., 0.],
+       [0., 0., 0., 1.]])
+>>> np.identity(4)
+array([[1., 0., 0., 0.],
+       [0., 1., 0., 0.],
+       [0., 0., 1., 0.],
+       [0., 0., 0., 1.]])
+
+Q11. By using numpy module, generate ndarray with random numbers from 1 to 100 with the shape:(2,3,4)?
+
+>>> np.random.randint(1,101,size=(2,3,4))
+array([[[74, 40, 32, 67],
+        [93, 34, 31, 86],
+        [ 4,  3, 54, 90]],
+
+       [[11, 25, 49, 38],
+        [ 8, 20, 40, 59],
+        [60, 88, 83, 51]]])
+
+Q12. By using numpy module, generate a random number between 0 and 1?
+
+>>> np.random.rand()
+0.6563606029950465
+>>> np.random.rand()
+0.33598671990249174
+>>> np.random.rand()
+0.15195445013829945
+>>> np.random.rand()
+0.5626155619658889
+>>> np.random.rand()
+0.6960796589387932
+>>> np.random.rand()
+0.6192875505685667
+>>> np.random.rand()
+0.16912615729913438
+
+Q13. By using numpy module, generate an array of 10 random samples from a uniform distribution over [0,1)?
+
+np.random.rand(10)
+>>> np.random.rand(10)
+array([0.23175153, 0.23516775, 0.16853863, 0.4361167 , 0.43694742,
+       0.24545343, 0.974236  , 0.64757367, 0.0890843 , 0.3444159 ])
+
+Q14. By using numpy module, generate an array of 10 random samples from a uniform distribution over [10,20)?
+
+
+np.random.uniform(low=0.0,high=1.0,size=None)
+
+>>> np.random.uniform(10,20,10)
+array([19.80499139, 11.35811947, 11.31370507, 14.94415343, 17.25710869,
+       12.40993842, 16.25033344, 17.10067103, 10.18653984, 19.31369384])
+
+Q15. By using numpy module, generate an array of 10 random samples from a standard normal distribution of mean 0 and standard deviation 1?
+
+np.random.randn(10)
+
+
+
+Q16. By using numpy module, generate an array of 10 random samples from a standard normal distribution of mean 15 and and stadard deviation 4?
+
+
+normal(loc=0.0, scale=1.0, size=None)
+loc--->mean
+scale--->standard deviation
+
+a = np.random.normal(15,4,10)
+
+
+Q17. Create an array of 10 linearly spaced points between 1 and 100?
+
+>>> np.linspace(1,100,10)
+array([  1.,  12.,  23.,  34.,  45.,  56.,  67.,  78.,  89., 100.])
+
+
+
+Q18. Create an array of 15 linearly spaced points between 0 and 1?
+
+>>> np.linspace(0,1,15)
+array([0.        , 0.07142857, 0.14285714, 0.21428571, 0.28571429,
+       0.35714286, 0.42857143, 0.5       , 0.57142857, 0.64285714,
+       0.71428571, 0.78571429, 0.85714286, 0.92857143, 1.        ])
+
+
+
+
+Chapter-24: Numpy Practice Quesions Set-2
+=========================================
+>>> a = np.arange(1,37).reshape(6,6)
+>>> a
+array([[ 1,  2,  3,  4,  5,  6],
+       [ 7,  8,  9, 10, 11, 12],
+       [13, 14, 15, 16, 17, 18],
+       [19, 20, 21, 22, 23, 24],
+       [25, 26, 27, 28, 29, 30],
+       [31, 32, 33, 34, 35, 36]])
+
+
+Q1. How to access element 16?
+
+Q2. To get the following array:
+
+array([[2, 3, 4, 5]])
+
+
+Q3. To get the following array:
+
+array([2, 3, 4, 5])
+
+
+Q4. To get the following array
+array([[ 1,  2,  3,  4,  5,  6],
+       [31, 32, 33, 34, 35, 36]])
+
+
+Q5. To get the following array
+array([[ 9, 10],
+       [15, 16],
+       [21, 22]])
+
+
+Q6. Create 1-D array with all even numbers of a?
+
+
+
+Q7. Create a 1-D array with elements of a which are divisible by 5?
+
+Q8. Create 1-D array with elements 8,17,26 and 35. We have to use elements of a?
+
+
+Q9. Select minimum element of this ndarray?
+
+
+Q10. Select maximum element of this ndarray?
+
+
+Q11. Find sum of elements present inside this array?
+
+Q12. Find sum of elements along axis-0?
+
+
+Q13. Find mean of this array?
+
+
+Q14. Find median of this array?
+
+
+Q15. Find variance of this array?
+
+
+Q16. Find standard deviation of this array?
+
